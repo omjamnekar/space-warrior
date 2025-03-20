@@ -17,7 +17,7 @@ dark_overlay.fill((0, 0, 0))  # Black overlay
 dark_overlay.set_alpha(100)  # Adjust darkness (increase for more darkness)
 background.blit(dark_overlay, (0, 0))  # Apply the darkening effect
 
-ship_img = pygame.image.load("assets/ship_1.png")
+# ship_img = pygame.image.load("assets/ship_1.png")
 laser_img = pygame.image.load("assets/laser.png")
 plasma_frame = plasma_frames = [
     pygame.transform.scale(
@@ -30,7 +30,7 @@ plasma_frame = plasma_frames = [
 meteor_img = pygame.image.load("assets/astroid/meteor.png")
 
 # Scale assets
-ship_img = pygame.transform.scale(ship_img, (50, 50))
+# ship_img = pygame.transform.scale(ship_img, (50, 50))
 laser_img = pygame.transform.scale(laser_img, (10, 20))
 meteor_img = pygame.transform.scale(meteor_img, (40, 40))
 
@@ -117,3 +117,14 @@ def fade_out_music(music, target_volume, fade_speed=0.05):
 
 ROCK_COLLIED=  pygame.mixer.Sound(os.path.join("assets", "sound", "collied", "rock-broke.mp3"))
 ROCK_COLLIED.set_volume(1) 
+
+
+SWITCH_WEAPON=  pygame.mixer.Sound(os.path.join("assets", "sound", "leaser", "reload.mp3"))
+SWITCH_WEAPON.set_volume(1) 
+
+
+GAME_WIDTH, GAME_HEIGHT = 1280, 720
+game_surface = pygame.Surface((GAME_WIDTH, GAME_HEIGHT))
+
+game_surface.blit(background, (0, 0))
+# draw player, asteroids, etc. onto game_surface

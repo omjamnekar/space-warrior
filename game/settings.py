@@ -4,6 +4,10 @@ import os
 WIDTH, HEIGHT = 1300, 850
 FPS = 60
 
+# Fullscreen flag (optional to toggle default)
+FULLSCREEN = False
+
+
 MAX_HP=500
 MAX_XP=500
 

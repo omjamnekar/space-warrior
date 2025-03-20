@@ -1,11 +1,11 @@
 import pygame
-from game.hexbar import StatusBars
-from game.player import Player
-from game.meteor import Meteor
+from game.systems.hexbar import StatusBars
+from game.entities.player import Player
+from game.entities.meteor import Meteor
 from game.settings import WIDTH, HEIGHT
-from game.assets import game_font, SPACE_DEFAULT,ROCK_COLLIED ,Assets
-from game.game_over import GameOverScreen
-from game.home import HomeScreen
+from game.assets import game_font, SPACE_DEFAULT,ROCK_COLLIED ,Assets ,background
+from game.senes.game_over import GameOverScreen
+from game.senes.home import HomeScreen
 
 import random
 
@@ -25,11 +25,20 @@ class Game:
         self.running = False
         self.home= HomeScreen(window=self.window) 
         self.fonts =Assets.load_fonts()
-    
+        self.background_image =background
+        self.show_xp_empty = False
+        self.xp_empty_start_time = None
+
         self.flash_alpha = 0  # Opacity for red flash
         self.shake_duration = 0  # Shake effect duration
-        self.shake_intensity = 0  # How much the screen moves 
-     
+        self.shake_intensity = 0  # How much the screen moves
+        self.xp_warning = False
+    
+    def trigger_shake(self, intensity=5, duration=20):
+        self.shake_intensity = intensity
+        self.shake_duration = duration
+
+        
     def load_best_score(self):
         try:
             with open("best_score.txt", "r") as file:
@@ -57,6 +66,9 @@ class Game:
         else:
             self.spawn_timer -= 1
 
+    def trigger_damage_flash(self):
+        self.flash_alpha = 150  # Set alpha value to start the flash (150 is a nice strong but not fully opaque flash)
+
 
 
     def check_collisions(self):
@@ -69,6 +81,10 @@ class Game:
 
             if self.player.hitbox.colliderect(meteor.hitbox) and not meteor.exploding and  not  self.player.is_destroyed:
                  self.hex_bar.decrease_hp(30)
+                 self.trigger_damage_flash()
+                 self.flash_alpha = 150
+                 self.trigger_shake(intensity=8, duration=20)
+
                  meteor.destroy()
                  if(self.hex_bar.hp> 10):
                     ROCK_COLLIED.play()
@@ -130,9 +146,19 @@ class Game:
                 self.player.shoot()
             elif self.player.weapon_type == "plasma" and self.hex_bar.xp>0:
                 self.player.shoot_plasma_continuous()
-            if self.player.weapon_type == "plasma" and self.hex_bar.xp== 0:
-                self.xp_empty()
+        
+        if self.player.weapon_type == "plasma" and self.hex_bar.xp == 0:
+            if not self.show_xp_empty:
+                self.show_xp_empty = True
+                self.xp_empty_start_time = pygame.time.get_ticks()
+        else:
+            # Optional reset if you want to trigger it only on hitting zero
+            if self.hex_bar.xp > 0:
+                self.show_xp_empty = False
+                self.xp_empty_start_time = None
 
+
+        
 
         for meteor in self.meteors:
             meteor.move()
@@ -142,44 +168,84 @@ class Game:
 
 
     def xp_empty(self):
-        if self.hex_bar.xp==0:
-            font = Assets.PRESS_START_FONT  # Use a default font with size 36
-            text = font.render("XP is empty", True, (255, 0, 0))  # Red color
-            text_rect = text.get_rect(bottomright=(WIDTH - 10, HEIGHT - 50))  # Position near the bottom-right, slightly upwards
+        font = Assets.PRESS_START_FONT 
+        print("sdsd") 
+        current_time = pygame.time.get_ticks()
+        self.xp_empty_start_time = pygame.time.get_ticks()  
+        if current_time - self.xp_empty_start_time <= 2000:
+            text = font.render("XP is empty", True, (255, 0, 0))  
+            text_rect = text.get_rect(bottomright=(WIDTH - 10, HEIGHT - 50))
             self.window.blit(text, text_rect)
+            
            
+
 
     def draw(self, window):
-       
+        offset_x, offset_y = 0, 0
+        if self.shake_duration > 0 and self.shake_intensity >= 1:
+            offset_x = random.randint(-int(self.shake_intensity), int(self.shake_intensity))
+            offset_y = random.randint(-int(self.shake_intensity), int(self.shake_intensity))
+            self.shake_duration -= 1
+            self.shake_intensity = max(self.shake_intensity - 0.5, 0)
 
-        self.player.draw(window)
-              
-        if self.game_over_screen and not self.running:  
+        # ✅ Create temp_surface and draw everything on it:
+        temp_surface = pygame.Surface((WIDTH, HEIGHT))
+
+        # Draw background first on temp_surface:
+        temp_surface.blit(self.background_image, (offset_x, offset_y))
+
+        # Draw entities on temp_surface:
+        for meteor in self.meteors[:]:
+            meteor.draw(temp_surface, offset=(offset_x, offset_y))
+        self.player.draw(temp_surface, offset=(offset_x, offset_y))
+        self.hex_bar.draw(temp_surface)
+
+  
+
+        # Flash overlay:
+        if self.flash_alpha > 0:
+            flash_surface = pygame.Surface((WIDTH, HEIGHT))
+            flash_surface.fill((255, 0, 0))
+            flash_surface.set_alpha(self.flash_alpha)
+            temp_surface.blit(flash_surface, (0, 0))
+            self.flash_alpha = max(self.flash_alpha - 10, 0)
+
+        # ✅ Finally, blit the completed temp_surface on the window:
+        window.blit(temp_surface, (0, 0))
+        
+
+        if self.show_xp_empty and self.xp_empty_start_time is not None:
+            current_time = pygame.time.get_ticks()
+            if current_time - self.xp_empty_start_time <= 2000:  # show for 2 seconds
+                font = Assets.PRESS_START_FONT
+                text = font.render("XP is empty", True, (255, 0, 0))  
+                text_rect = text.get_rect(bottomright=(WIDTH - 10, HEIGHT - 50))
+                self.window.blit(text, text_rect)
+            else:
+                self.show_xp_empty = False
+                self.xp_empty_start_time = None
+
+
+
+        # Handle game over fade and transition
+        if self.game_over_screen and not self.running:
             fade_surface = pygame.Surface((WIDTH, HEIGHT))
             fade_surface.fill((0, 0, 0))
-            for alpha in range(0, 255, 5):  # Gradually increase alpha for fade-in effect
+            for alpha in range(0, 255, 5):
                 fade_surface.set_alpha(alpha)
-                self.window.blit(fade_surface, (0, 0))
+                window.blit(fade_surface, (0, 0))
                 pygame.display.update()
-                pygame.time.delay(10)  # Delay to control the speed of the fade-in transition
-           
-            self.game_ov_instance.show_game_over_screen(window=self.window, best_score=self.best_score, score=self.score)
-            self.running = False  
-            self.game_over_screen = False  
+                pygame.time.delay(10)
+
+            self.game_ov_instance.show_game_over_screen(window=window, best_score=self.best_score, score=self.score)
+            self.running = False
+            self.game_over_screen = False
             self.hex_bar.reset()
             self.restart(self.hex_bar)
-            
-            home_screen = HomeScreen(window)  
-            home_screen.show() 
-            return  # Stop further rendering
-        for meteor in self.meteors[:]:
-            if not meteor.draw(window):
-                self.meteors.remove(meteor)
-
-        self.hex_bar.draw(window)
-
-
-
+            home_screen = HomeScreen(window)
+            home_screen.show()
+            return  # Stop further rendering for this frame
+    
     def show_score(self, window):
         score_text = game_font.render(f"Score: {self.score}", True, (255, 255, 255))
         best_score_text = game_font.render(f"Best: {self.best_score}", True, (255, 215, 0))

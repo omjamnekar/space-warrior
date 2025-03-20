@@ -2,7 +2,7 @@ import pygame
 import random
 from game.assets import SPACE_DEFAULT, Assets, background
 from game.settings import WIDTH, HEIGHT
-from game.stars import Star
+from game.entities.stars import Star
 
 # Colors
 HEADING_COLOR = (22, 138, 173)

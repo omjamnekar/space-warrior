@@ -1,13 +1,13 @@
 import pygame
 import time
 import random
-from game.meteor import Meteor
-from game.settings import WIDTH, HEIGHT, FPS
+from game.entities.meteor import Meteor
+from game.settings import WIDTH, HEIGHT, FPS, FULLSCREEN
 from game.assets import background, game_font,Assets, SPACE_DEFAULT ,fade_out_music
-from game.game_logic import Game
-from game.pause import PauseScreen
-from game.hexbar import StatusBars
-from game.home import HomeScreen
+from game.systems.game_logic import Game
+from game.senes.pause import PauseScreen
+from game.systems.hexbar import StatusBars
+from game.senes.home import HomeScreen
 
 pygame.init()
 window = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -25,9 +25,14 @@ darkened_background.set_alpha(180)
 def main():
     """Main game loop"""
     pygame.init()
-    
+    global WIDTH, HEIGHT
 
-    window = pygame.display.set_mode((WIDTH, HEIGHT))
+
+    window_flags = pygame.RESIZABLE
+    if FULLSCREEN:
+        window_flags = pygame.FULLSCREEN
+    window = pygame.display.set_mode((WIDTH, HEIGHT), window_flags)
+
     clock = pygame.time.Clock()
 
     home_screen = HomeScreen(window)
@@ -42,11 +47,11 @@ def main():
     paused = False
     show_best_score = False
     last_weapon_switch_time = 0
-    darkened_background = pygame.transform.scale(background, (WIDTH, HEIGHT))
+    # darkened_background = pygame.transform.scale(background, (WIDTH, HEIGHT))
 
     while running:
         clock.tick(FPS)
-        window.blit(darkened_background, (0, 0))
+        window.blit(background, (0, 0))
         events = pygame.event.get()  # Capture all events
 
         for event in events:
@@ -57,11 +62,19 @@ def main():
 
             
             elif event.type == pygame.KEYDOWN:
-                # if event.key == pygame.K_r and game.game_over_screen:
-                    # game.restart(game.hex_bar)  # Restart the game
-                    # game.game_over_screen = False  # Ensure Game Over is cleared
-                    # game.running = True  # Resume game loop
+                if event.key == pygame.K_F11:
+                    # Toggle fullscreen
+                    if window.get_flags() & pygame.FULLSCREEN:
+                        window = pygame.display.set_mode((WIDTH, HEIGHT), pygame.RESIZABLE)
+                    else:
+                        window = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+                elif event.type == pygame.VIDEORESIZE:
+                    WIDTH, HEIGHT = event.w, event.h
+                    window = pygame.display.set_mode((WIDTH, HEIGHT), pygame.RESIZABLE)
+                    darkened_background = pygame.transform.scale(background, (WIDTH, HEIGHT))
 
+              
+              
                 if event.key == pygame.K_ESCAPE:
                     fade_in_pause_screen(window, pause_screen)  # Apply fade-in
                     pause_screen.toggle()

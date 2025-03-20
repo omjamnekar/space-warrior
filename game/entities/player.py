@@ -1,8 +1,8 @@
 import pygame
 from game.settings import WIDTH, HEIGHT  
 
-from game.bullet import Bullet, LeaserBullet
-from game.assets import ship_destroy_frame, ship_flight_frames, Assets ,SHIP_DESTROY   # ✅ Import flight animation
+from game.entities.bullet import Bullet, LeaserBullet
+from game.assets import SWITCH_WEAPON, ship_destroy_frame, ship_flight_frames, Assets ,SHIP_DESTROY   # ✅ Import flight animation
 
 class Player:
     def __init__(self):
@@ -45,6 +45,7 @@ class Player:
 
     def switch_weapon(self):
         """Switch between laser and plasma weapons."""
+        SWITCH_WEAPON.play()
         self.weapon_index = (self.weapon_index + 1) % len(self.weapon_types)
         self.weapon_type = self.weapon_types[self.weapon_index]
         self.weapon_switch_message = f"Weapon switched to: {self.weapon_type}"
@@ -76,28 +77,28 @@ class Player:
             self.shoot_timer -= 1
         self.update_bullets()
 
-    def draw(self, window):
+
+    def draw(self, window, offset=(0, 0)):
         """Draw player ship with animations, bullets, and destruction effects."""
-        
+        offset_x, offset_y = offset
         now = pygame.time.get_ticks()
+
         if self.play_destroy_animation:
             SHIP_DESTROY.play()
             current_time = pygame.time.get_ticks()
-           
+
             if current_time - self.destroy_animation_start_time > 50:  # 50ms per frame
-                
                 self.destroy_animation_start_time = current_time
                 if self.ship_destroy_index < len(self.ship_destroy_frames) - 1:
-                    
                     self.ship_destroy_index += 1
                 else:
                     self.play_destroy_animation = False  # Stop animation when last frame is reached
                     self.is_destroyed = True  # ✅ Mark player as destroyed
 
-            # Render destroy animation frame
+            # Render destroy animation frame with offset
             frame = self.ship_destroy_frames[self.ship_destroy_index]
             frame_rect = frame.get_rect(center=self.hitbox.center)
-            window.blit(frame, frame_rect.topleft)
+            window.blit(frame, (frame_rect.x + offset_x, frame_rect.y + offset_y))
 
         else:
             # 🚀 Handle Flight Animation
@@ -105,11 +106,14 @@ class Player:
                 self.last_update = now
                 self.current_frame = (self.current_frame + 1) % len(self.ship_frames)
 
-            window.blit(self.ship_frames[self.current_frame], self.rect.topleft)
+            # Draw the player with offset
+            window.blit(self.ship_frames[self.current_frame], (self.rect.x + offset_x, self.rect.y + offset_y))
 
-        # 🔫 Draw Bullets
+        # 🔫 Draw Bullets with offset
         for bullet in self.bullets:
-            bullet.draw(window)
+            bullet.draw(window, offset=(offset_x, offset_y))
+
+
 
     def shoot(self):
         """Shoot based on current weapon type."""

@@ -48,17 +48,19 @@ class Meteor:
             self.exploding = True
             self.explosion_index = 0  
 
-    def draw(self, window):
+    def draw(self, window, offset=(0, 0)):
+        offset_x, offset_y = offset
         if self.exploding:
             if self.explosion_index < len(self.scaled_explosions):
                 explosion_img = self.scaled_explosions[self.explosion_index]
-                explosion_x = self.rect.centerx - explosion_img.get_width() // 1
-                explosion_y = self.rect.centery - explosion_img.get_height() // 1
+                explosion_x = self.rect.centerx - explosion_img.get_width() // 1 + offset_x
+                explosion_y = self.rect.centery - explosion_img.get_height() // 1 + offset_y
                 window.blit(explosion_img, (explosion_x, explosion_y))
                 self.explosion_index += 1  
                 return True  
             else:
                 return False  
         else:
-            window.blit(self.image, (self.rect.x, self.rect.y))
+            window.blit(self.image, (self.rect.x + offset_x, self.rect.y + offset_y))
             return True  
+

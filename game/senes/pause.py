@@ -1,7 +1,7 @@
 import pygame
 from game.settings import WIDTH, HEIGHT
 from game.assets import Assets, SELECT_OPTION
-from game.copyright import CopyRightText
+from game.ui.copyright import CopyRightText
 
 class PauseScreen:
     def __init__(self):

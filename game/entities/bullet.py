@@ -29,8 +29,10 @@ class Bullet:
         self.y -= self.speed
         self.rect.center = (self.x, self.y)
 
-    def draw(self, window):
-        window.blit(self.image, self.rect.topleft)
+    def draw(self, window, offset=(0, 0)):
+        offset_x, offset_y = offset
+        window.blit(self.image, (self.rect.x + offset_x, self.rect.y + offset_y))
+
 
     def off_screen(self):
         return self.y < 0 
@@ -55,9 +57,10 @@ class LeaserBullet:
             self.animation_counter = 0
             self.animation_index = (self.animation_index + 1) % len(self.frames)
 
-    def draw(self, window):
+    def draw(self, window,offset=(0, 0)):
+        offset_x, offset_y = offset
         current_frame = self.frames[self.animation_index]
-        window.blit(current_frame, self.rect.topleft)
-
+        window.blit(current_frame, (self.rect.x + offset_x, self.rect.y + offset_y))
+       
     def off_screen(self):
         return self.rect.bottom < 0
