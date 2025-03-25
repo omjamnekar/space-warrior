@@ -84,10 +84,11 @@ def main():
                         SPACE_DEFAULT.set_volume(1) 
                     
 
-                if event.key == pygame.K_t:  
+                if event.key == pygame.K_q:  
                     print("T key pressed!")  # Debuggings
                     game.player.switch_weapon()  # ✅ Add this line to switch weapons
                    
+                
         
         if pause_screen.active:
             selected_option = pause_screen.update(events)  # Handle pause menu navigation
@@ -176,7 +177,7 @@ def fade_in_pause_screen(window, pause_screen):
 
 def transition_to_main(window, home_screen):
     
-    SPACE_DEFAULT.play()
+    SPACE_DEFAULT.play(loops=-1)
     
     """Fade out the home screen while revealing the main background"""
     alpha = 255  # Start fully visible

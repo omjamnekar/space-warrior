@@ -3,7 +3,7 @@ from game.systems.hexbar import StatusBars
 from game.entities.player import Player
 from game.entities.meteor import Meteor
 from game.settings import WIDTH, HEIGHT
-from game.assets import game_font, SPACE_DEFAULT,ROCK_COLLIED ,Assets ,background
+from game.assets import game_font,RELOAD_WEAPON, SPACE_DEFAULT,ROCK_COLLIED ,Assets ,background
 from game.senes.game_over import GameOverScreen
 from game.senes.home import HomeScreen
 
@@ -140,6 +140,13 @@ class Game:
         keys = pygame.key.get_pressed()
         self.player.move(keys)
         self.player.update()
+        if keys[pygame.K_r]:
+            RELOAD_WEAPON.play()           
+            self.player.reload()
+
+        if self.player.current_bullets == 0 and self.player.bullet_storage > 0:
+            RELOAD_WEAPON.play()
+            self.player.reload()
 
         if keys[pygame.K_SPACE]:
             if self.player.weapon_type == "laser":
@@ -198,7 +205,7 @@ class Game:
         for meteor in self.meteors[:]:
             meteor.draw(temp_surface, offset=(offset_x, offset_y))
         self.player.draw(temp_surface, offset=(offset_x, offset_y))
-        self.hex_bar.draw(temp_surface)
+        self.hex_bar.draw(temp_surface,self.player)
 
   
 

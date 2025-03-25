@@ -2,7 +2,7 @@ import pygame
 from game.settings import WIDTH, HEIGHT  
 
 from game.entities.bullet import Bullet, LeaserBullet
-from game.assets import SWITCH_WEAPON, ship_destroy_frame, ship_flight_frames, Assets ,SHIP_DESTROY   # ✅ Import flight animation
+from game.assets import RELOAD_WEAPON,SWITCH_WEAPON,BULLET,BULLET_STORAGE , ship_destroy_frame, ship_flight_frames, Assets ,SHIP_DESTROY   # ✅ Import flight animation
 
 class Player:
     def __init__(self):
@@ -42,6 +42,20 @@ class Player:
         self.weapon_switch_message = ""
         self.weapon_switch_message_start_time = 0
         self.weapon_message_duration = 3000  
+
+
+            # other attributes...
+        self.bullet_storage = BULLET_STORAGE
+        self.clip_size = BULLET
+        self.current_bullets = self.clip_size
+
+    def reload(self):
+        bullets_needed = self.clip_size - self.current_bullets
+        bullets_to_reload = min(bullets_needed, self.bullet_storage)
+        self.current_bullets += bullets_to_reload
+        self.bullet_storage -= bullets_to_reload
+
+
 
     def switch_weapon(self):
         """Switch between laser and plasma weapons."""
@@ -116,19 +130,26 @@ class Player:
 
 
     def shoot(self):
-        """Shoot based on current weapon type."""
         if self.play_destroy_animation or self.is_destroyed:
             return
+
         if self.shoot_timer == 0:
             if self.weapon_type == "plasma":
                 bullet = LeaserBullet(self.rect.centerx, self.rect.top)
                 self.bullets.append(bullet)
-                print("⚡ Plasma bullet fired!")
+                self.shoot_timer = self.shoot_delay
+
             elif self.weapon_type == "laser":
-                bullet = Bullet(self.rect.centerx, self.rect.top)
-                self.bullets.append(bullet)
-                print("🔫 Laser bullet fired!")
-            self.shoot_timer = self.shoot_delay
+                if self.current_bullets > 0:
+                    bullet = Bullet(self.rect.centerx, self.rect.top)
+                    self.bullets.append(bullet)
+                    self.current_bullets -= 1
+                    self.shoot_timer = self.shoot_delay
+                elif self.bullet_storage > 0:
+                    RELOAD_WEAPON.play()
+                    print("aasa")
+                    # self.reload()
+
 
     def shoot_plasma_continuous(self):
         """Continuous plasma shooting with cooldown."""
