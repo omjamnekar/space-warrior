@@ -28,6 +28,14 @@ METEOR_MAX_SPEED = 5  # ✅ Add this
 # Best Score Handling
 BEST_SCORE_FILE = "best_score.txt"
 
+#game stacts
+PROGRESS = 20
+LEVEL =4
+
+SPEED = 1000
+CAPACITY_BULLET =500
+
+
 def load_best_score():
     """Load the best score from a file, return 0 if the file does not exist or is invalid."""
     try:

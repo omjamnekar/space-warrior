@@ -8,6 +8,7 @@ from game.systems.game_logic import Game
 from game.senes.pause import PauseScreen
 from game.systems.hexbar import StatusBars
 from game.senes.home import HomeScreen
+from game.ui.home.home import HomeInterface
 
 pygame.init()
 window = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -36,17 +37,18 @@ def main():
     clock = pygame.time.Clock()
 
     home_screen = HomeScreen(window)
+    start_screen = HomeInterface(window=window)
     home_screen.show()
-    
-    transition_to_main(window, home_screen)
-
+    start_screen.show()
+    # transition_to_main(window, home_screen)
+    # transition_to_main(window,start_screen)
     status = StatusBars()
     game = Game(status=status, window=window)
     pause_screen = PauseScreen()
     running = True
     paused = False
     show_best_score = False
-    last_weapon_switch_time = 0
+    # last_weapon_switch_time = 0
     # darkened_background = pygame.transform.scale(background, (WIDTH, HEIGHT))
 
     while running:
@@ -86,8 +88,7 @@ def main():
 
                 if event.key == pygame.K_q:  
                     print("T key pressed!")  # Debuggings
-                    game.player.switch_weapon()  # ✅ Add this line to switch weapons
-                   
+                    game.player.switch_weapon() 
                 
         
         if pause_screen.active:
@@ -180,11 +181,11 @@ def transition_to_main(window, home_screen):
     SPACE_DEFAULT.play(loops=-1)
     
     """Fade out the home screen while revealing the main background"""
-    alpha = 255  # Start fully visible
-    fade_speed = 5  # Adjust speed for smooth fading
+    alpha = 255  
+    fade_speed = 5  
 
-    fade_surface = home_screen.bg.copy()  # Create a copy to modify opacity 
-  
+    fade_surface = home_screen.bg.copy() 
+
     while alpha > 0:
         clock.tick(60)
         window.blit(background, (0, 0))  # Show main game background
@@ -192,6 +193,7 @@ def transition_to_main(window, home_screen):
         window.blit(fade_surface, (0, 0))  # Draw fading home screen
         alpha -= fade_speed  # Decrease opacity
         pygame.display.update()
+
 
 
 

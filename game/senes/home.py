@@ -1,6 +1,6 @@
 import pygame
 import random
-from game.assets import SPACE_DEFAULT, Assets, background
+from game.assets import  Assets, background
 from game.settings import WIDTH, HEIGHT
 from game.entities.stars import Star
 
@@ -65,15 +65,8 @@ class HomeScreen:
                     exit()
                 elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_RETURN:
-                        # Gradually lower the volume and stop the music in 1.5 seconds
-                        for volume in range(10, -1, -1):  # Gradually reduce volume
-                            pygame.mixer.music.set_volume(volume / 10)
-                            pygame.time.delay(150)  # Delay to simulate gradual volume down
-                        
-                        pygame.mixer.music.fadeout(1500)  # Fade out over 1.5 seconds
-                        pygame.mixer.music.stop()
-                        SPACE_DEFAULT.play()
-                        SPACE_DEFAULT.set_volume(1) 
+
+                    
                         return
             self.window.blit(self.bg, (0, 0))
             for star in self.stars:
