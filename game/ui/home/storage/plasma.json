@@ -1,0 +1,344 @@
+[
+  {
+    "id": "plasma000",
+    "name": "Core Ignitor",
+    "description": "A volatile plasma orb used to ignite unstable elements.",
+    "type": "plasma_core",
+    "rarity": "epic",
+    "level_required": 4,
+    "effects": ["ignite_enemies", "area_burn"],
+    "unlock_condition": "Unlocked after completing Flame Reactor Trials",
+    "bought": false,
+    "stats": {
+      "burn_damage": 35,
+      "radius": 4,
+      "duration": 6
+    },
+    "price": 1200
+  },
+  {
+    "id": "plasma001",
+    "name": "Cryo-Cube",
+    "description": "Plasma-infused cube that freezes nearby enemies.",
+    "type": "plasma_cryo",
+    "rarity": "rare",
+    "level_required": 3,
+    "effects": ["freeze_zone", "slow_effect"],
+    "unlock_condition": "Unlocked after Ice Protocol completion",
+    "bought": false,
+    "stats": {
+      "freeze_radius": 3,
+      "slow_percent": 40,
+      "duration": 5
+    },
+    "price": 1000
+  },
+  {
+    "id": "plasma002",
+    "name": "Pulse Detonator",
+    "description": "Detonates in a shockwave of heated plasma pulses.",
+    "type": "plasma_explosive",
+    "rarity": "epic",
+    "level_required": 5,
+    "effects": ["pulse_blast", "knockback"],
+    "unlock_condition": "Unlocked after Shockwave Research",
+    "bought": false,
+    "stats": {
+      "damage": 50,
+      "blast_radius": 5,
+      "knockback_strength": 30
+    },
+    "price": 1400
+  },
+  {
+    "id": "plasma003",
+    "name": "Singularity Matrix",
+    "description": "A condensed matrix that channels plasma into a micro black hole.",
+    "type": "plasma_device",
+    "rarity": "legendary",
+    "level_required": 7,
+    "effects": ["gravity_pull", "plasma_implosion"],
+    "unlock_condition": "Unlocked after Void Resonance",
+    "bought": false,
+    "stats": {
+      "pull_force": 60,
+      "implosion_damage": 90,
+      "cooldown": 10
+    },
+    "price": 2000
+  },
+  {
+    "id": "plasma004",
+    "name": "Plasma Shard",
+    "description": "A sharp crystalline projectile made of solidified plasma.",
+    "type": "plasma_projectile",
+    "rarity": "rare",
+    "level_required": 2,
+    "effects": ["piercing", "burn_over_time"],
+    "unlock_condition": "Unlocked after Plasma Crystal Refinement",
+    "bought": false,
+    "stats": {
+      "damage": 25,
+      "burn": 10,
+      "range": 12
+    },
+    "price": 850
+  },
+  {
+    "id": "plasma005",
+    "name": "Mag Core Disc",
+    "description": "Magnetized plasma weapon that returns like a boomerang.",
+    "type": "plasma_disc",
+    "rarity": "epic",
+    "level_required": 4,
+    "effects": ["boomerang_attack", "electrostatic_damage"],
+    "unlock_condition": "Unlocked after Magnetic Loop Activation",
+    "bought": false,
+    "stats": {
+      "damage": 30,
+      "return_chance": 100,
+      "hit_multiple": true
+    },
+    "price": 1300
+  },
+  {
+    "id": "plasma006",
+    "name": "Ion Filter Cell",
+    "description": "Filters raw ion energy into controlled plasma beams.",
+    "type": "plasma_converter",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["beam_attack", "energy_efficiency"],
+    "unlock_condition": "Unlocked after Beam Stabilization Research",
+    "bought": false,
+    "stats": {
+      "beam_damage": 20,
+      "range": 10,
+      "cooldown": 2
+    },
+    "price": 950
+  },
+  {
+    "id": "plasma007",
+    "name": "Cyclotron Sphere",
+    "description": "A spinning plasma orb that damages all in its path.",
+    "type": "plasma_orb",
+    "rarity": "epic",
+    "level_required": 5,
+    "effects": ["orbital_damage", "continuous_hit"],
+    "unlock_condition": "Unlocked after Cyclotron Calibration",
+    "bought": false,
+    "stats": {
+      "rotation_radius": 3,
+      "damage_per_tick": 15,
+      "duration": 7
+    },
+    "price": 1500
+  },
+  {
+    "id": "plasma008",
+    "name": "Cryo-Tether Unit",
+    "description": "Launches a plasma tether to freeze and pull enemies.",
+    "type": "plasma_tether",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["freeze_pull", "tether_stun"],
+    "unlock_condition": "Unlocked after Grapple Lab Unlock",
+    "bought": false,
+    "stats": {
+      "range": 6,
+      "freeze_time": 3,
+      "pull_strength": 50
+    },
+    "price": 1100
+  },
+  {
+    "id": "plasma009",
+    "name": "Nova Star Core",
+    "description": "Emits a powerful nova blast that scorches all enemies nearby.",
+    "type": "plasma_bomb",
+    "rarity": "legendary",
+    "level_required": 6,
+    "effects": ["nova_blast", "area_clear"],
+    "unlock_condition": "Unlocked after Nova Reactor ignition",
+    "bought": false,
+    "stats": {
+      "blast_damage": 100,
+      "radius": 6,
+      "cooldown": 12
+    },
+    "price": 1900
+  },
+  
+  {
+    "id": "plasma010",
+    "name": "Photon Shield Breaker",
+    "description": "Designed to pierce and disable energy shields using concentrated plasma.",
+    "type": "plasma_piercer",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["shield_break", "armor_pierce"],
+    "unlock_condition": "Unlocked after defeating Photon Warden",
+    "bought": false,
+    "stats": {
+      "pierce_damage": 40,
+      "shield_penetration": 70,
+      "cooldown": 4
+    },
+    "price": 1350
+  },
+  {
+    "id": "plasma011",
+    "name": "Crystal Spine Cluster",
+    "description": "Fires a volley of plasma-infused crystal shards.",
+    "type": "plasma_shard_volley",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["multi_shot", "bleed_effect"],
+    "unlock_condition": "Unlocked after Crystal Caverns boss fight",
+    "bought": false,
+    "stats": {
+      "shard_count": 5,
+      "damage_per_shard": 18,
+      "bleed_chance": 30
+    },
+    "price": 1450
+  },
+  {
+    "id": "plasma012",
+    "name": "Quantum Grid Emitter",
+    "description": "Emits a destabilizing plasma grid that paralyzes enemies.",
+    "type": "plasma_trap",
+    "rarity": "legendary",
+    "level_required": 7,
+    "effects": ["paralyze", "area_disable"],
+    "unlock_condition": "Unlocked after hacking Quantum Node X3",
+    "bought": false,
+    "stats": {
+      "paralyze_duration": 5,
+      "area_range": 4,
+      "activation_delay": 2
+    },
+    "price": 2000
+  },
+  {
+    "id": "plasma013",
+    "name": "Vortex Ring",
+    "description": "Creates a ring of plasma that pulls enemies inward.",
+    "type": "plasma_vortex",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["pull_enemies", "aoe_damage"],
+    "unlock_condition": "Unlocked in Vortex Depths",
+    "bought": false,
+    "stats": {
+      "pull_strength": 55,
+      "damage": 40,
+      "radius": 3
+    },
+    "price": 1600
+  },
+  {
+    "id": "plasma014",
+    "name": "Thermal Spike",
+    "description": "A plasma dart that injects intense thermal energy into targets.",
+    "type": "plasma_dart",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["thermal_burst", "direct_damage"],
+    "unlock_condition": "Unlocked via Thermal Module Blueprint",
+    "bought": false,
+    "stats": {
+      "damage": 30,
+      "burn_duration": 4,
+      "range": 8
+    },
+    "price": 900
+  },
+  {
+    "id": "plasma015",
+    "name": "Echo Lens",
+    "description": "Amplifies plasma soundwaves to disorient enemies.",
+    "type": "plasma_sonic",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["disorient", "stun_blast"],
+    "unlock_condition": "Unlocked after Sonic Rift calibration",
+    "bought": false,
+    "stats": {
+      "stun_duration": 3,
+      "range": 6,
+      "cooldown": 5
+    },
+    "price": 1150
+  },
+  {
+    "id": "plasma016",
+    "name": "Chrono Core Plate",
+    "description": "Stabilizes plasma energy to slow down enemy perception.",
+    "type": "plasma_time_control",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["slow_time", "aoe_effect"],
+    "unlock_condition": "Unlocked after Temporal Trials",
+    "bought": false,
+    "stats": {
+      "slow_percent": 50,
+      "duration": 6,
+      "radius": 5
+    },
+    "price": 1750
+  },
+  {
+    "id": "plasma017",
+    "name": "Infernium Fragment",
+    "description": "A burning plasma shard that deals searing damage on impact.",
+    "type": "plasma_burn",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["ignite", "burn_chain"],
+    "unlock_condition": "Unlocked from Infernium Mines",
+    "bought": false,
+    "stats": {
+      "initial_damage": 35,
+      "burn_ticks": 5,
+      "chain_radius": 2
+    },
+    "price": 1300
+  },
+  {
+    "id": "plasma018",
+    "name": "Polar Sync Drive",
+    "description": "Releases opposing plasma charges that collide and explode.",
+    "type": "plasma_sync",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["dual_charge", "explosion_on_sync"],
+    "unlock_condition": "Unlocked after Synchronization Protocol",
+    "bought": false,
+    "stats": {
+      "charge_speed": 3,
+      "explosion_damage": 60,
+      "sync_radius": 4
+    },
+    "price": 1500
+  },
+  {
+    "id": "plasma019",
+    "name": "Flux Reactor Core",
+    "description": "Overloaded plasma core that unleashes chaotic energy bursts.",
+    "type": "plasma_reactor",
+    "rarity": "legendary",
+    "level_required": 8,
+    "effects": ["random_burst", "chaotic_damage"],
+    "unlock_condition": "Unlocked from Reactor Alpha collapse event",
+    "bought": false,
+    "stats": {
+      "min_damage": 20,
+      "max_damage": 100,
+      "cooldown": 8
+    },
+    "price": 2100
+  }
+
+]

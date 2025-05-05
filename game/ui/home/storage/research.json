@@ -1,0 +1,534 @@
+[
+  {
+    "id": "tile000",
+    "name": "Quantum Drive Blueprint",
+    "description": "Schematics for a prototype drive enabling near-instant travel.",
+    "type": "engineering_research",
+    "rarity": "epic",
+    "level_required": 8,
+    "effects": ["warp_jump", "fuel_efficiency"],
+    "unlock_condition": "Unlocked after visiting the Chrono Rift",
+    "bought": false,
+    "stats": {
+      "jump_distance": 150,
+      "energy_cost": 70,
+      "cooldown_reduction": 25
+    },
+    "price": 2000
+  },
+  {
+    "id": "tile001",
+    "name": "Xeno DNA Isolation Kit",
+    "description": "Isolates alien DNA strands for genetic research.",
+    "type": "biotech",
+    "rarity": "rare",
+    "level_required": 6,
+    "effects": ["mutagenic_research", "hybrid_lifeforms"],
+    "unlock_condition": "Unlocked after capturing a Xarnathi scout",
+    "bought": false,
+    "stats": {
+      "dna_purity": 92,
+      "mutation_rate": 15,
+      "stability": 80
+    },
+    "price": 1450
+  },
+  {
+    "id": "tile002",
+    "name": "Encrypted War Protocols",
+    "description": "Contains classified AI combat tactics from the Machine War.",
+    "type": "military_data",
+    "rarity": "legendary",
+    "level_required": 9,
+    "effects": ["tactical_ai_upgrade", "battlefield_prediction"],
+    "unlock_condition": "Unlocked after decoding enemy command node",
+    "bought": false,
+    "stats": {
+      "combat_efficiency": 98,
+      "decryption_difficulty": 70,
+      "ai_response_time": 35
+    },
+    "price": 2600
+  },
+  {
+    "id": "tile003",
+    "name": "Ancient Relay Module",
+    "description": "Recovered from ruins, enables interstellar comms relay.",
+    "type": "tech_artifact",
+    "rarity": "uncommon",
+    "level_required": 4,
+    "effects": ["boost_communication", "interference_resistance"],
+    "unlock_condition": "Unlocked after exploring the ruins of Sector T-47",
+    "bought": false,
+    "stats": {
+      "signal_clarity": 70,
+      "range": 100,
+      "artifact_integrity": 60
+    },
+    "price": 800
+  },
+  {
+    "id": "tile004",
+    "name": "Stellar Signal Analyzer",
+    "description": "Decodes deep space signals to uncover hidden anomalies.",
+    "type": "signal_analysis",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["unlock_hidden_nodes", "boost_signal_range"],
+    "unlock_condition": "Unlocked after scanning a black hole perimeter",
+    "bought": false,
+    "stats": {
+      "signal_range": 75,
+      "data_accuracy": 88,
+      "power_draw": 20
+    },
+    "price": 1200
+  },
+  {
+    "id": "tile005",
+    "name": "Neural Core Enhancer",
+    "description": "Boosts neural processing for faster decision-making.",
+    "type": "neural_upgrade",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["boost_reflex", "faster_commands"],
+    "unlock_condition": "Unlocked after defeating Neuro Titan",
+    "bought": false,
+    "stats": {
+      "neural_speed": 95,
+      "stability": 80,
+      "cooldown_reduction": 30
+    },
+    "price": 1450
+  },
+  {
+    "id": "tile006",
+    "name": "Graviton Link Band",
+    "description": "Enables manipulation of localized gravity fields.",
+    "type": "wearable_tech",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["gravity_control", "enhanced_mobility"],
+    "unlock_condition": "Unlocked after researching quantum gravity",
+    "bought": false,
+    "stats": {
+      "field_stability": 85,
+      "lift_capacity": 120,
+      "duration": 30
+    },
+    "price": 1300
+  },
+  {
+    "id": "tile007",
+    "name": "Field Medic Uplink",
+    "description": "Portable system that links to remote medical AI units.",
+    "type": "medical_device",
+    "rarity": "uncommon",
+    "level_required": 4,
+    "effects": ["remote_healing", "status_monitoring"],
+    "unlock_condition": "Unlocked after medical facility upgrade",
+    "bought": false,
+    "stats": {
+      "healing_rate": 60,
+      "signal_reach": 45,
+      "energy_usage": 15
+    },
+    "price": 900
+  },
+  {
+    "id": "tile008",
+    "name": "MEC Schematic Alpha",
+    "description": "Designs for building first-generation Mechanized Combat Units.",
+    "type": "combat_engineering",
+    "rarity": "epic",
+    "level_required": 7,
+    "effects": ["construct_mechs", "armor_plating_upgrade"],
+    "unlock_condition": "Unlocked after defeating rogue MEC unit",
+    "bought": false,
+    "stats": {
+      "armor_rating": 120,
+      "build_speed": 40,
+      "power_draw": 50
+    },
+    "price": 1750
+  },
+  {
+    "id": "tile009",
+    "name": "Ion Blade Prototype",
+    "description": "Experimental melee weapon that channels ion energy.",
+    "type": "weapon_tech",
+    "rarity": "legendary",
+    "level_required": 10,
+    "effects": ["energy_damage", "shield_pierce"],
+    "unlock_condition": "Unlocked after crafting at Ion Forge",
+    "bought": false,
+    "stats": {
+      "damage": 140,
+      "energy_cost": 30,
+      "durability": 90
+    },
+    "price": 3000
+  },
+  
+  {
+    "id": "tile010",
+    "name": "Auto-Diagnostic Bot",
+    "description": "Deployable unit that runs full system checks and repairs.",
+    "type": "maintenance_drone",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["auto_repair", "damage_diagnostics"],
+    "unlock_condition": "Unlocked after station integrity falls below 50%",
+    "bought": false,
+    "stats": {
+      "repair_rate": 60,
+      "mobility": 45,
+      "battery_life": 80
+    },
+    "price": 1350
+  },
+  {
+    "id": "tile011",
+    "name": "Recon Exo-Suit",
+    "description": "Lightweight armor designed for scouts and field agents.",
+    "type": "armor_tech",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["stealth_field", "enhanced_vision"],
+    "unlock_condition": "Unlocked after stealth mission success",
+    "bought": false,
+    "stats": {
+      "armor": 65,
+      "agility_boost": 35,
+      "stealth_rating": 80
+    },
+    "price": 1550
+  },
+  {
+    "id": "tile012",
+    "name": "Cryo Storage Core",
+    "description": "Advanced preservation unit for biological samples.",
+    "type": "biotech_storage",
+    "rarity": "uncommon",
+    "level_required": 4,
+    "effects": ["sample_stability", "long_term_storage"],
+    "unlock_condition": "Unlocked after bio-containment incident",
+    "bought": false,
+    "stats": {
+      "temperature_control": -150,
+      "storage_capacity": 100,
+      "power_usage": 25
+    },
+    "price": 950
+  },
+  {
+    "id": "tile013",
+    "name": "Holographic Interface Pad",
+    "description": "Projects dynamic control panels in real space.",
+    "type": "interface_device",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["multi_terminal_access", "visual_feedback"],
+    "unlock_condition": "Unlocked after upgrading command deck",
+    "bought": false,
+    "stats": {
+      "ui_responsiveness": 90,
+      "data_flow": 70,
+      "durability": 60
+    },
+    "price": 1100
+  },
+  {
+    "id": "tile014",
+    "name": "Magnetic Data Strip",
+    "description": "Encrypted tape used for ancient star maps.",
+    "type": "data_storage",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["access_star_charts", "decrypt_navigation_paths"],
+    "unlock_condition": "Unlocked after discovering archive vault",
+    "bought": false,
+    "stats": {
+      "storage_density": 40,
+      "read_speed": 30,
+      "encryption_level": 70
+    },
+    "price": 650
+  },
+  {
+    "id": "tile015",
+    "name": "Nano-Repair Cartridge",
+    "description": "Used to patch armor and tech with microscopic bots.",
+    "type": "field_repair",
+    "rarity": "common",
+    "level_required": 2,
+    "effects": ["quick_repair", "emergency_use"],
+    "unlock_condition": "Unlocked after completing basic engineering research",
+    "bought": false,
+    "stats": {
+      "repair_amount": 40,
+      "cooldown": 20,
+      "single_use": 1
+    },
+    "price": 300
+  },
+  {
+    "id": "tile016",
+    "name": "Universal Access Protocol",
+    "description": "Grants access to most digital systems and locks.",
+    "type": "hacking_tool",
+    "rarity": "rare",
+    "level_required": 6,
+    "effects": ["unlock_doors", "system_override"],
+    "unlock_condition": "Unlocked after hacking 3 secured terminals",
+    "bought": false,
+    "stats": {
+      "access_speed": 85,
+      "trace_resistance": 70,
+      "uses": 10
+    },
+    "price": 1250
+  },
+  {
+    "id": "tile017",
+    "name": "Core Memory Chip",
+    "description": "Remnant of a sentient AI core containing valuable data.",
+    "type": "ai_artifact",
+    "rarity": "epic",
+    "level_required": 7,
+    "effects": ["memory_download", "ai_comprehension"],
+    "unlock_condition": "Unlocked after AI shutdown event",
+    "bought": false,
+    "stats": {
+      "data_volume": 120,
+      "integrity": 85,
+      "decryption_time": 40
+    },
+    "price": 1700
+  },
+  {
+    "id": "tile018",
+    "name": "Wrist-Mounted Scanner",
+    "description": "Scans materials and lifeforms for quick analysis.",
+    "type": "field_tool",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["analyze_objects", "scan_lifeforms"],
+    "unlock_condition": "Unlocked after completing planetary survey",
+    "bought": false,
+    "stats": {
+      "scan_speed": 60,
+      "accuracy": 75,
+      "battery_life": 50
+    },
+    "price": 700
+  },
+  {
+    "id": "tile019",
+    "name": "Bio-Injector Vial",
+    "description": "Delivers experimental compounds to enhance biology.",
+    "type": "biotech",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["stim_boost", "temporary_resistance"],
+    "unlock_condition": "Unlocked after researching alien physiology",
+    "bought": false,
+    "stats": {
+      "duration": 45,
+      "effect_strength": 60,
+      "side_effect_risk": 20
+    },
+    "price": 1000
+  },
+
+
+  {
+    "id": "tile020",
+    "name": "Quantum Globe",
+    "description": "Portable quantum model for mapping anomalies in space-time.",
+    "type": "quantum_tool",
+    "rarity": "epic",
+    "level_required": 7,
+    "effects": ["anomaly_detection", "space_bend_preview"],
+    "unlock_condition": "Unlocked after entering unstable rift",
+    "bought": false,
+    "stats": {
+      "scan_range": 90,
+      "quantum_accuracy": 85,
+      "stability": 70
+    },
+    "price": 1600
+  },
+  {
+    "id": "tile021",
+    "name": "Mission Debrief Tablet",
+    "description": "Stores encrypted records of previous field operations.",
+    "type": "data_device",
+    "rarity": "common",
+    "level_required": 2,
+    "effects": ["review_logs", "gain_experience"],
+    "unlock_condition": "Unlocked after completing first mission",
+    "bought": false,
+    "stats": {
+      "storage_capacity": 50,
+      "log_detail": 40,
+      "durability": 60
+    },
+    "price": 400
+  },
+  {
+    "id": "tile022",
+    "name": "Tactical Briefcase",
+    "description": "Encrypted command case with strategic documents.",
+    "type": "intel_gear",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["battle_strategy", "intel_boost"],
+    "unlock_condition": "Unlocked after command promotion",
+    "bought": false,
+    "stats": {
+      "intel_accuracy": 75,
+      "deploy_speed": 50,
+      "encryption_level": 80
+    },
+    "price": 1150
+  },
+  {
+    "id": "tile023",
+    "name": "Neuro-VR Interface",
+    "description": "Immersive system for direct brain-to-VR training.",
+    "type": "neural_interface",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["combat_simulation", "knowledge_upload"],
+    "unlock_condition": "Unlocked after neural link calibration",
+    "bought": false,
+    "stats": {
+      "immersion": 95,
+      "sync_stability": 85,
+      "learning_speed": 70
+    },
+    "price": 1500
+  },
+  {
+    "id": "tile024",
+    "name": "Stellar Map Console",
+    "description": "Displays known and hidden routes across galaxies.",
+    "type": "navigation_module",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["chart_routes", "detect_rifts"],
+    "unlock_condition": "Unlocked after first warp jump",
+    "bought": false,
+    "stats": {
+      "map_precision": 80,
+      "update_frequency": 60,
+      "interface_speed": 50
+    },
+    "price": 1000
+  },
+  {
+    "id": "tile025",
+    "name": "Field Report Sheet",
+    "description": "Manually recorded field analysis notes.",
+    "type": "log_document",
+    "rarity": "common",
+    "level_required": 1,
+    "effects": ["record_findings", "gain_minor_xp"],
+    "unlock_condition": "Unlocked after first planetary survey",
+    "bought": false,
+    "stats": {
+      "info_quality": 40,
+      "usage_limit": 5,
+      "data_value": 30
+    },
+    "price": 150
+  },
+  {
+    "id": "tile026",
+    "name": "Urban Terrain Scan Map",
+    "description": "Scans cityscapes for structural weak points.",
+    "type": "tactical_tool",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["structure_analysis", "hideout_detection"],
+    "unlock_condition": "Unlocked after city exploration",
+    "bought": false,
+    "stats": {
+      "resolution": 75,
+      "scan_speed": 60,
+      "range": 50
+    },
+    "price": 750
+  },
+  {
+    "id": "tile027",
+    "name": "Research Logbook",
+    "description": "Tracks experiment progress and failure rates.",
+    "type": "scientific_document",
+    "rarity": "common",
+    "level_required": 2,
+    "effects": ["track_trials", "log_discoveries"],
+    "unlock_condition": "Unlocked after first lab experiment",
+    "bought": false,
+    "stats": {
+      "entry_capacity": 100,
+      "data_clarity": 55,
+      "research_boost": 10
+    },
+    "price": 350
+  },
+  {
+    "id": "tile028",
+    "name": "Encryption Decoder Unit",
+    "description": "Portable device for breaking low-mid level encryptions.",
+    "type": "decryption_tool",
+    "rarity": "uncommon",
+    "level_required": 4,
+    "effects": ["decode_files", "unlock_data"],
+    "unlock_condition": "Unlocked after capturing enemy data drive",
+    "bought": false,
+    "stats": {
+      "decrypt_speed": 70,
+      "heat_generation": 30,
+      "usage_count": 12
+    },
+    "price": 850
+  },
+  {
+    "id": "tile029",
+    "name": "Confidential Dossier",
+    "description": "Contains classified files about high-profile subjects.",
+    "type": "intel_file",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["gain_knowledge", "mission_insight"],
+    "unlock_condition": "Unlocked after spy network setup",
+    "bought": false,
+    "stats": {
+      "intel_value": 90,
+      "exposure_risk": 20,
+      "data_volume": 60
+    },
+    "price": 1200
+  },
+  {
+    "id": "tile030",
+    "name": "Synthetic Brain Core",
+    "description": "Simulated organ used for AI and synthetic being development.",
+    "type": "biomech_core",
+    "rarity": "epic",
+    "level_required": 7,
+    "effects": ["ai_simulation", "enhanced_logic"],
+    "unlock_condition": "Unlocked after developing artificial consciousness",
+    "bought": false,
+    "stats": {
+      "processing_power": 95,
+      "logic_rate": 90,
+      "heat_resistance": 70
+    },
+    "price": 1800
+  }
+
+
+]

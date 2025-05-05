@@ -1,0 +1,505 @@
+[
+  {
+    "id": "neural_core_enhancer",
+    "name": "Neural Core Enhancer",
+    "description": "Boosts neural processing for faster decision-making.",
+    "type": "neural_upgrade",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["boost_reflex", "faster_commands"],
+    "unlock_condition": "Unlocked after defeating Neuro Titan",
+    "bought": false,
+    "stats": {
+      "neural_speed": 95,
+      "stability": 80,
+      "cooldown_reduction": 30
+    },
+    "price": 1450
+  },
+  {
+    "id": "synaptic_amplifier",
+    "name": "Synaptic Amplifier",
+    "description": "Enhances signal transmission in the brain.",
+    "type": "neural_upgrade",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["signal_boost", "synapse_acceleration"],
+    "unlock_condition": "Complete Synaptic Trials",
+    "bought": false,
+    "stats": {
+      "neural_speed": 75,
+      "stability": 60,
+      "accuracy": 20
+    },
+    "price": 1100
+  },
+  {
+    "id": "cognitive_recalibrator",
+    "name": "Cognitive Recalibrator",
+    "description": "Resets and optimizes thought patterns.",
+    "type": "neural_tool",
+    "rarity": "legendary",
+    "level_required": 8,
+    "effects": ["mind_reset", "focus_boost"],
+    "unlock_condition": "Found in AI Temple",
+    "bought": false,
+    "stats": {
+      "cooldown": 20,
+      "focus_gain": 100,
+      "mental_clarity": 90
+    },
+    "price": 1800
+  },
+  {
+    "id": "memory_patch_unit",
+    "name": "Memory Patch Unit",
+    "description": "Temporarily restores fragmented memories.",
+    "type": "support_module",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["memory_restore"],
+    "unlock_condition": "Purchase from Medical Bay",
+    "bought": false,
+    "stats": {
+      "restore_capacity": 50,
+      "stability": 40
+    },
+    "price": 720
+  },
+  {
+    "id": "neurolink_transmitter",
+    "name": "NeuroLink Transmitter",
+    "description": "Enables multi-device thought control.",
+    "type": "neural_comm",
+    "rarity": "epic",
+    "level_required": 7,
+    "effects": ["telepathy", "drone_sync"],
+    "unlock_condition": "Unlocked at Control Nexus",
+    "bought": false,
+    "stats": {
+      "range": 90,
+      "connectivity": 85
+    },
+    "price": 1300
+  },
+  {
+    "id": "cortex_shield_chip",
+    "name": "Cortex Shield Chip",
+    "description": "Protects critical neural processes under attack.",
+    "type": "defense_module",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["neural_shield", "temp_resist"],
+    "unlock_condition": "Unlock after AI Virus encounter",
+    "bought": false,
+    "stats": {
+      "shield_strength": 70,
+      "cooldown": 60
+    },
+    "price": 950
+  },
+  {
+    "id": "bio_syn_fusion_core",
+    "name": "Bio-Syn Fusion Core",
+    "description": "Fuses organic and synthetic neurons for max efficiency.",
+    "type": "hybrid_module",
+    "rarity": "legendary",
+    "level_required": 10,
+    "effects": ["bio_sync", "core_overdrive"],
+    "unlock_condition": "Defeat Core Sentinel",
+    "bought": false,
+    "stats": {
+      "fusion_efficiency": 100,
+      "cooldown_reduction": 50
+    },
+    "price": 2000
+  },
+  {
+    "id": "dream_interface_module",
+    "name": "Dream Interface Module",
+    "description": "Enables access to subconscious simulations.",
+    "type": "exploration_module",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["lucid_control", "vision_sync"],
+    "unlock_condition": "Unlocked via Dream State Protocol",
+    "bought": false,
+    "stats": {
+      "simulation_depth": 85,
+      "stability": 65
+    },
+    "price": 1200
+  },
+  {
+    "id": "brainwave_stabilizer",
+    "name": "Brainwave Stabilizer",
+    "description": "Smoothens erratic brainwave activity.",
+    "type": "stabilization_chip",
+    "rarity": "common",
+    "level_required": 2,
+    "effects": ["wave_normalize"],
+    "unlock_condition": "Available in Clinic Store",
+    "bought": false,
+    "stats": {
+      "stability": 50,
+      "duration": 30
+    },
+    "price": 500
+  },
+  {
+    "id": "holo_vision_driver",
+    "name": "Holo-Vision Driver",
+    "description": "Projects real-time augmented neural HUDs.",
+    "type": "visual_module",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["vision_overlay", "target_tracking"],
+    "unlock_condition": "Get through Elite NeuroHackers",
+    "bought": false,
+    "stats": {
+      "accuracy": 75,
+      "cooldown": 30
+    },
+    "price": 990
+  },
+  {
+    "id": "neuro_vision_uplink",
+    "name": "Neuro-Vision Uplink",
+    "description": "Links vision directly to neural command systems for enhanced awareness.",
+    "type": "visual_module",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["auto_target", "field_analysis"],
+    "unlock_condition": "Unlocked after Vision Lab mission",
+    "bought": false,
+    "stats": {
+      "accuracy": 85,
+      "range": 70,
+      "cooldown": 25
+    },
+    "price": 1350
+  },
+  {
+    "id": "neuro_kinetic_driver",
+    "name": "Neuro-Kinetic Driver",
+    "description": "Synchronizes kinetic response with neural impulses.",
+    "type": "movement_module",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["quick_dash", "momentum_control"],
+    "unlock_condition": "Earned after Speed Trial",
+    "bought": false,
+    "stats": {
+      "speed_boost": 60,
+      "neural_latency": 20
+    },
+    "price": 950
+  },
+  {
+    "id": "psi_feedback_loop",
+    "name": "Psi Feedback Loop",
+    "description": "Feeds real-time psychic data back into the neural core.",
+    "type": "cognitive_module",
+    "rarity": "legendary",
+    "level_required": 9,
+    "effects": ["mind_prediction", "psi_control"],
+    "unlock_condition": "Only available during Psi Rift Event",
+    "bought": false,
+    "stats": {
+      "cooldown": 15,
+      "focus_gain": 120
+    },
+    "price": 1850
+  },
+  {
+    "id": "neural_heat_sink",
+    "name": "Neural Heat Sink",
+    "description": "Dissipates excess mental activity to prevent overheating.",
+    "type": "stabilization_chip",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["cool_mind", "overload_resist"],
+    "unlock_condition": "Purchase from Tech Medic Bay",
+    "bought": false,
+    "stats": {
+      "stability": 55,
+      "cooldown_reduction": 15
+    },
+    "price": 740
+  },
+  {
+    "id": "neuro_implant_alpha",
+    "name": "Neuro Implant Alpha",
+    "description": "Base-level neural enhancement for basic command optimization.",
+    "type": "neural_upgrade",
+    "rarity": "common",
+    "level_required": 1,
+    "effects": ["signal_stabilize"],
+    "unlock_condition": "Available by default",
+    "bought": false,
+    "stats": {
+      "neural_speed": 40,
+      "stability": 30
+    },
+    "price": 300
+  },
+  {
+    "id": "mental_fortifier_chip",
+    "name": "Mental Fortifier Chip",
+    "description": "Protects mental pathways from psychic interference.",
+    "type": "defense_module",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["mind_shield", "disruption_resist"],
+    "unlock_condition": "Obtained in Psychic Defense Lab",
+    "bought": false,
+    "stats": {
+      "resistance": 80,
+      "duration": 45
+    },
+    "price": 1080
+  },
+  {
+    "id": "cognitive_interface_link",
+    "name": "Cognitive Interface Link",
+    "description": "Enables real-time interaction with AI systems.",
+    "type": "comm_module",
+    "rarity": "epic",
+    "level_required": 7,
+    "effects": ["ai_sync", "neural_interface"],
+    "unlock_condition": "Achieved via Data Link Protocol",
+    "bought": false,
+    "stats": {
+      "connectivity": 95,
+      "response_rate": 88
+    },
+    "price": 1500
+  },
+  {
+    "id": "dreamstate_stabilizer",
+    "name": "Dreamstate Stabilizer",
+    "description": "Stabilizes neural pathways during subconscious exploration.",
+    "type": "exploration_module",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["dream_safety", "lucid_navigation"],
+    "unlock_condition": "Required for Dream Vault Access",
+    "bought": false,
+    "stats": {
+      "stability": 70,
+      "duration": 50
+    },
+    "price": 890
+  },
+  {
+    "id": "nanobridge_neurochip",
+    "name": "NanoBridge Neurochip",
+    "description": "Creates microscopic neural bridges for enhanced signal flow.",
+    "type": "neural_upgrade",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["nano_sync", "flow_optimization"],
+    "unlock_condition": "Drop from Nano Grid Event",
+    "bought": false,
+    "stats": {
+      "signal_speed": 78,
+      "neural_efficiency": 82
+    },
+    "price": 1380
+  },
+  {
+    "id": "adaptive_reflex_matrix",
+    "name": "Adaptive Reflex Matrix",
+    "description": "Learns and adapts to player response patterns over time.",
+    "type": "adaptive_module",
+    "rarity": "legendary",
+    "level_required": 10,
+    "effects": ["reflex_learning", "autotune_response"],
+    "unlock_condition": "Only usable with Reflex Protocol Alpha",
+    "bought": false,
+    "stats": {
+      "reaction_time": 95,
+      "cooldown": 20
+    },
+    "price": 1900
+  },
+
+    {
+    "id": "neural_sync_node",
+    "name": "Neural Sync Node",
+    "description": "Optimizes neural pathways for faster data transmission between modules.",
+    "type": "neural_core",
+    "rarity": "epic",
+    "level_required": 7,
+    "effects": ["sync_boost", "lag_reduction"],
+    "unlock_condition": "Unlockable in Neuro Lab Tier 3",
+    "bought": false,
+    "stats": {
+      "sync_speed": 90,
+      "efficiency": 80
+    },
+    "price": 1450
+  },
+  {
+    "id": "bioadaptive_gel_pack",
+    "name": "Bioadaptive Gel Pack",
+    "description": "Maintains neural implant temperature and adapts to brain activity in real time.",
+    "type": "stabilization_chip",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["heat_regulation", "neural_comfort"],
+    "unlock_condition": "Available via Organic Upgrade Path",
+    "bought": false,
+    "stats": {
+      "cooling": 60,
+      "comfort_index": 75
+    },
+    "price": 1120
+  },
+  {
+    "id": "neuroshock_dampener",
+    "name": "Neuroshock Dampener",
+    "description": "Protects against overload spikes and reduces neural fatigue.",
+    "type": "defense_module",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["shock_resist", "fatigue_reduction"],
+    "unlock_condition": "Drop from Neural Arena",
+    "bought": false,
+    "stats": {
+      "resistance": 85,
+      "duration": 60
+    },
+    "price": 1390
+  },
+  {
+    "id": "quantum_reflex_emitter",
+    "name": "Quantum Reflex Emitter",
+    "description": "Triggers instantaneous reactions through quantum-linked neurons.",
+    "type": "reflex_module",
+    "rarity": "legendary",
+    "level_required": 10,
+    "effects": ["instant_react", "quantum_processing"],
+    "unlock_condition": "Requires Reflex Mastery Achievement",
+    "bought": false,
+    "stats": {
+      "reaction_time": 98,
+      "cooldown": 18
+    },
+    "price": 2100
+  },
+  {
+    "id": "synaptic_fuser_beta",
+    "name": "Synaptic Fuser Beta",
+    "description": "Fuses external stimuli with synaptic response for faster integration.",
+    "type": "neural_upgrade",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["stimuli_response", "integration_speed"],
+    "unlock_condition": "Purchased from Synapse Exchange",
+    "bought": false,
+    "stats": {
+      "signal_integration": 75,
+      "latency": 22
+    },
+    "price": 990
+  },
+  {
+    "id": "emotion_regulator_unit",
+    "name": "Emotion Regulator Unit",
+    "description": "Controls hormonal and emotional spikes for combat efficiency.",
+    "type": "control_module",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["calm_mind", "focus_gain"],
+    "unlock_condition": "Reward for Neuro Calm Trial",
+    "bought": false,
+    "stats": {
+      "focus": 60,
+      "stress_resistance": 45
+    },
+    "price": 800
+  },
+  {
+    "id": "haptic_feedback_matrix",
+    "name": "Haptic Feedback Matrix",
+    "description": "Provides real-time haptic feedback for neural decision training.",
+    "type": "training_module",
+    "rarity": "common",
+    "level_required": 2,
+    "effects": ["haptic_alert", "motor_response"],
+    "unlock_condition": "Unlocked by completing Tutorial Protocol",
+    "bought": false,
+    "stats": {
+      "feedback_strength": 50,
+      "reaction_improvement": 30
+    },
+    "price": 420
+  },
+  {
+    "id": "neurofield_projector",
+    "name": "Neurofield Projector",
+    "description": "Projects a temporary neuro-shield around key neural zones.",
+    "type": "defense_module",
+    "rarity": "rare",
+    "level_required": 6,
+    "effects": ["field_projection", "data_shield"],
+    "unlock_condition": "Crafted via Neural Forge",
+    "bought": false,
+    "stats": {
+      "shield_strength": 88,
+      "duration": 40
+    },
+    "price": 1275
+  },
+  {
+    "id": "memory_loop_chip",
+    "name": "Memory Loop Chip",
+    "description": "Loops short-term memory processes for tactical recall during missions.",
+    "type": "cognitive_module",
+    "rarity": "uncommon",
+    "level_required": 4,
+    "effects": ["recall_boost", "loop_cognition"],
+    "unlock_condition": "Unlocked in Memory Vault",
+    "bought": false,
+    "stats": {
+      "memory_recall": 65,
+      "focus_gain": 50
+    },
+    "price": 860
+  },
+  {
+    "id": "bioelectrical_amplifier",
+    "name": "Bioelectrical Amplifier",
+    "description": "Amplifies natural brain impulses to enhance reaction and power.",
+    "type": "enhancement_module",
+    "rarity": "epic",
+    "level_required": 8,
+    "effects": ["impulse_amplify", "reaction_boost"],
+    "unlock_condition": "Found in Bioelectric Lab",
+    "bought": false,
+    "stats": {
+      "power_output": 95,
+      "reaction_time": 92
+    },
+    "price": 1600
+  },
+    {
+    "id": "cognitive_overdrive_unit",
+    "name": "Cognitive Overdrive Unit",
+    "description": "Pushes the brain's computational limits for rapid multitasking.",
+    "type": "cognitive_module",
+    "rarity": "epic",
+    "level_required": 9,
+    "effects": ["multi_tasking", "speed_thought"],
+    "unlock_condition": "Unlocked via Cognitive Trial Completion",
+    "bought": false,
+    "stats": {
+      "processing_speed": 94,
+      "focus_stability": 88
+    },
+    "price": 1750
+  }
+]
+
+

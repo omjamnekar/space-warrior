@@ -1,0 +1,502 @@
+[
+  {
+    "id": "tile000",
+    "name": "Encrypted Data Log",
+    "description": "A secured log containing high-level mission details.",
+    "type": "data_log",
+    "rarity": "rare",
+    "level_required": 1,
+    "effects": ["unlock_dialogue", "quest_trigger"],
+    "unlock_condition": "Found in Sector Alpha vault",
+    "bought": false,
+    "stats": {
+      "data_integrity": 85,
+      "encryption_level": 3
+    },
+    "price": 300
+  },
+  {
+    "id": "tile001",
+    "name": "Mission Debrief Chip",
+    "description": "Stores aftermath details of failed recon missions.",
+    "type": "log_chip",
+    "rarity": "common",
+    "level_required": 1,
+    "effects": ["lore_unlock"],
+    "unlock_condition": "Dropped by Recon Bot",
+    "bought": false,
+    "stats": {
+      "entries": 5,
+      "chip_quality": "standard"
+    },
+    "price": 120
+  },
+  {
+    "id": "tile002",
+    "name": "Encrypted Transmission",
+    "description": "Contains fragments of alien communication protocols.",
+    "type": "transmission_fragment",
+    "rarity": "uncommon",
+    "level_required": 2,
+    "effects": ["decode_for_rewards"],
+    "unlock_condition": "Found in Satellite Wreckage",
+    "bought": false,
+    "stats": {
+      "fragments": 3,
+      "decoding_difficulty": 4
+    },
+    "price": 250
+  },
+  {
+    "id": "tile003",
+    "name": "Field Journal Entry",
+    "description": "A soldier’s account of an unexpected plasma storm.",
+    "type": "journal",
+    "rarity": "common",
+    "level_required": 1,
+    "effects": ["unlock_lore"],
+    "unlock_condition": "Random drop from patrol drones",
+    "bought": false,
+    "stats": {
+      "pages": 6,
+      "damage": "slight"
+    },
+    "price": 100
+  },
+  {
+    "id": "tile004",
+    "name": "Recon Target Grid",
+    "description": "Map overlay with marked enemy positions and anomalies.",
+    "type": "target_map",
+    "rarity": "uncommon",
+    "level_required": 2,
+    "effects": ["mini_map_overlay"],
+    "unlock_condition": "Dropped by Elite Recon Drone",
+    "bought": false,
+    "stats": {
+      "targets_marked": 7,
+      "accuracy": 95
+    },
+    "price": 350
+  },
+  {
+    "id": "tile005",
+    "name": "Base Navigation Display",
+    "description": "A portable module showing layouts of abandoned bases.",
+    "type": "navigation_tool",
+    "rarity": "rare",
+    "level_required": 3,
+    "effects": ["enable_autonav"],
+    "unlock_condition": "Found in command terminal room",
+    "bought": false,
+    "stats": {
+      "coverage_area": "Base Delta",
+      "sync_speed": 2
+    },
+    "price": 500
+  },
+  {
+    "id": "tile006",
+    "name": "Tech Wrist Band",
+    "description": "A worn device used to access secured vaults.",
+    "type": "accessory_key",
+    "rarity": "rare",
+    "level_required": 2,
+    "effects": ["unlock_vault", "wearable"],
+    "unlock_condition": "Found on fallen technician",
+    "bought": false,
+    "stats": {
+      "access_level": "C",
+      "sync_state": "degraded"
+    },
+    "price": 480
+  },
+  {
+    "id": "tile007",
+    "name": "Encrypted Maintenance Sheet",
+    "description": "Contains repair logs and system statuses for a mech unit.",
+    "type": "maintenance_log",
+    "rarity": "common",
+    "level_required": 1,
+    "effects": ["repair_hint", "crafting_clue"],
+    "unlock_condition": "Looted from scrapyard",
+    "bought": false,
+    "stats": {
+      "entries": 12,
+      "legibility": "moderate"
+    },
+    "price": 220
+  },
+  {
+    "id": "tile008",
+    "name": "MEC Blueprint",
+    "description": "A structural diagram for building military-grade exo-mechs.",
+    "type": "blueprint",
+    "rarity": "epic",
+    "level_required": 5,
+    "effects": ["unlock_mech_parts", "engineering_buff"],
+    "unlock_condition": "Unlocked after defeating Mech Overseer",
+    "bought": false,
+    "stats": {
+      "component_count": 9,
+      "schematic_quality": "high"
+    },
+    "price": 950
+  },
+  {
+    "id": "tile009",
+    "name": "Energy Rod",
+    "description": "A crystal rod pulsing with stored energy signatures.",
+    "type": "energy_tool",
+    "rarity": "uncommon",
+    "level_required": 2,
+    "effects": ["power_up_device"],
+    "unlock_condition": "Found in Reactor Cores",
+    "bought": false,
+    "stats": {
+      "energy_output": 75,
+      "stability": "stable"
+    },
+    "price": 300
+  },
+  {
+    "id": "tile010",
+    "name": "Hazard Unit Core",
+    "description": "Central module salvaged from a decommissioned hazard unit.",
+    "type": "core_module",
+    "rarity": "rare",
+    "level_required": 3,
+    "effects": ["crafting_component", "energy_reserve"],
+    "unlock_condition": "Dropped by Hazard Bot Mk II",
+    "bought": false,
+    "stats": {
+      "power_output": 60,
+      "integrity": 80
+    },
+    "price": 520
+  },
+  {
+    "id": "tile011",
+    "name": "Signal Booster Panel",
+    "description": "Improves wireless range and scan strength.",
+    "type": "upgrade_component",
+    "rarity": "uncommon",
+    "level_required": 2,
+    "effects": ["boost_scan_range"],
+    "unlock_condition": "Found in crashed comms relay",
+    "bought": false,
+    "stats": {
+      "range_increase": 30,
+      "durability": "medium"
+    },
+    "price": 280
+  },
+  {
+    "id": "tile012",
+    "name": "Quantum Lock Interface",
+    "description": "An advanced digital key used for high-security tech.",
+    "type": "security_tool",
+    "rarity": "epic",
+    "level_required": 4,
+    "effects": ["unlock_high_security"],
+    "unlock_condition": "Crafted from rare parts",
+    "bought": false,
+    "stats": {
+      "hack_level": 5,
+      "cooldown": 12
+    },
+    "price": 900
+  },
+  {
+    "id": "tile013",
+    "name": "Power Cell Mk II",
+    "description": "Reusable energy cell for various high-demand devices.",
+    "type": "energy_source",
+    "rarity": "rare",
+    "level_required": 2,
+    "effects": ["charge_tool", "backup_power"],
+    "unlock_condition": "Found in cargo containers",
+    "bought": false,
+    "stats": {
+      "charge_capacity": 120,
+      "recharge_time": 8
+    },
+    "price": 480
+  },
+  {
+    "id": "tile014",
+    "name": "Nano Repair Kit",
+    "description": "Heals damaged gear and systems using nanites.",
+    "type": "repair_kit",
+    "rarity": "common",
+    "level_required": 1,
+    "effects": ["restore_item_durability"],
+    "unlock_condition": "Purchase from outpost vendor",
+    "bought": false,
+    "stats": {
+      "uses": 3,
+      "repair_rate": 35
+    },
+    "price": 150
+  },
+  {
+    "id": "tile015",
+    "name": "Security Protocol Chip",
+    "description": "Provides layered security functions to terminals.",
+    "type": "chip_module",
+    "rarity": "uncommon",
+    "level_required": 2,
+    "effects": ["boost_terminal_defense"],
+    "unlock_condition": "Salvaged from AI console",
+    "bought": false,
+    "stats": {
+      "protocol_layers": 4,
+      "effectiveness": 70
+    },
+    "price": 290
+  },
+  {
+    "id": "tile016",
+    "name": "Circuit Board Fragment",
+    "description": "Part of a burnt board used in prototype mechs.",
+    "type": "scrap",
+    "rarity": "common",
+    "level_required": 1,
+    "effects": ["scrap_material"],
+    "unlock_condition": "Dropped by broken droid",
+    "bought": false,
+    "stats": {
+      "scrap_value": 40,
+      "condition": "damaged"
+    },
+    "price": 60
+  },
+  {
+    "id": "tile017",
+    "name": "Plasma Coil",
+    "description": "Coil that regulates plasma flow in weapon systems.",
+    "type": "weapon_component",
+    "rarity": "rare",
+    "level_required": 3,
+    "effects": ["boost_weapon_damage"],
+    "unlock_condition": "Looted from plasma gunner",
+    "bought": false,
+    "stats": {
+      "output_boost": 15,
+      "heat_resistance": "high"
+    },
+    "price": 510
+  },
+  {
+    "id": "tile018",
+    "name": "Data Extractor Chip",
+    "description": "Used for reading encrypted alien files.",
+    "type": "decryption_tool",
+    "rarity": "uncommon",
+    "level_required": 2,
+    "effects": ["read_encrypted_logs"],
+    "unlock_condition": "Found in alien ruins",
+    "bought": false,
+    "stats": {
+      "decode_speed": 45,
+      "compatibility": "multi-species"
+    },
+    "price": 270
+  },
+  {
+    "id": "tile019",
+    "name": "Orbital Beacon",
+    "description": "Used to mark coordinates for orbital strikes or retrieval.",
+    "type": "beacon_device",
+    "rarity": "epic",
+    "level_required": 5,
+    "effects": ["summon_support", "signal_satellite"],
+    "unlock_condition": "Unlock after mission Zeta",
+    "bought": false,
+    "stats": {
+      "signal_strength": 100,
+      "uses": 1
+    },
+    "price": 1200
+  },
+  
+  {
+    "id": "tile020",
+    "name": "Tactical Holo-Projector",
+    "description": "Projects a 3D map of the battlefield in real-time.",
+    "type": "upgrade_component",
+    "rarity": "rare",
+    "level_required": 3,
+    "effects": ["deploy_holo_map"],
+    "unlock_condition": "Dropped by Tactical Drone",
+    "bought": false,
+    "stats": {
+      "coverage_range": 50,
+      "power_consumption": "moderate"
+    },
+    "price": 650
+  },
+  {
+    "id": "tile021",
+    "name": "Combat Suit Blueprint",
+    "description": "A blueprint for crafting advanced combat suits.",
+    "type": "blueprint",
+    "rarity": "epic",
+    "level_required": 5,
+    "effects": ["unlock_combat_suit_parts"],
+    "unlock_condition": "Defeated Elite Mech Commander",
+    "bought": false,
+    "stats": {
+      "component_count": 7,
+      "schematic_quality": "high"
+    },
+    "price": 1200
+  },
+  {
+    "id": "tile022",
+    "name": "Advanced Shield Generator",
+    "description": "Provides enhanced energy shields for vehicles and mechs.",
+    "type": "defensive_module",
+    "rarity": "rare",
+    "level_required": 3,
+    "effects": ["boost_shield_strength"],
+    "unlock_condition": "Found in secure military warehouse",
+    "bought": false,
+    "stats": {
+      "shield_strength": 150,
+      "energy_consumption": "high"
+    },
+    "price": 700
+  },
+  {
+    "id": "tile023",
+    "name": "Plasma Charge Module",
+    "description": "Upgrades weaponry to fire charged plasma shots.",
+    "type": "weapon_component",
+    "rarity": "uncommon",
+    "level_required": 2,
+    "effects": ["enable_plasma_shots"],
+    "unlock_condition": "Looted from plasma turrets",
+    "bought": false,
+    "stats": {
+      "charge_time": 3,
+      "plasma_damage": 50
+    },
+    "price": 420
+  },
+  {
+    "id": "tile024",
+    "name": "Mech Repair Drone",
+    "description": "A small autonomous drone used for mech repairs.",
+    "type": "repair_drone",
+    "rarity": "common",
+    "level_required": 2,
+    "effects": ["repair_mech_damage"],
+    "unlock_condition": "Found in damaged mech hangar",
+    "bought": false,
+    "stats": {
+      "repair_speed": 30,
+      "repair_capacity": 100
+    },
+    "price": 250
+  },
+  {
+    "id": "tile025",
+    "name": "Stealth Cloak",
+    "description": "A cloak that grants temporary invisibility.",
+    "type": "stealth_device",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["activate_stealth_mode"],
+    "unlock_condition": "Crafted from rare components",
+    "bought": false,
+    "stats": {
+      "duration": 15,
+      "cooldown": 30
+    },
+    "price": 850
+  },
+  {
+    "id": "tile026",
+    "name": "Energy Shield Module",
+    "description": "Adds an energy shield to vehicles for extra protection.",
+    "type": "defensive_module",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["activate_energy_shield"],
+    "unlock_condition": "Found in abandoned vehicle depot",
+    "bought": false,
+    "stats": {
+      "shield_capacity": 120,
+      "activation_delay": 1
+    },
+    "price": 520
+  },
+  {
+    "id": "tile027",
+    "name": "Anti-Gravity Generator",
+    "description": "A device that manipulates gravity fields to assist with flight.",
+    "type": "flight_module",
+    "rarity": "epic",
+    "level_required": 5,
+    "effects": ["enable_flight"],
+    "unlock_condition": "Defeat Gravity Master",
+    "bought": false,
+    "stats": {
+      "lift_capacity": 200,
+      "flight_time": 20
+    },
+    "price": 1350
+  },
+  {
+    "id": "tile028",
+    "name": "Ion Cannon Core",
+    "description": "Core component for upgrading weapons to fire ion beams.",
+    "type": "weapon_component",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["ion_beam_attack"],
+    "unlock_condition": "Looted from Ion Cannon wreckage",
+    "bought": false,
+    "stats": {
+      "ion_damage": 120,
+      "cooldown": 6
+    },
+    "price": 980
+  },
+  {
+    "id": "tile029",
+    "name": "Neural Interface Module",
+    "description": "Enhances human-computer interaction through direct neural connection.",
+    "type": "accessory_key",
+    "rarity": "epic",
+    "level_required": 4,
+    "effects": ["boost_hacking_ability"],
+    "unlock_condition": "Crafted from advanced tech",
+    "bought": false,
+    "stats": {
+      "hack_speed": 25,
+      "mental_fatigue": "low"
+    },
+    "price": 1100
+  },
+
+
+
+  {
+    "id": "tile030",
+    "name": "Thermal Imaging Scope",
+    "description": "A scope that enhances vision in low-light and heat signatures.",
+    "type": "upgrade_component",
+    "rarity": "rare",
+    "level_required": 3,
+    "effects": ["enable_thermal_vision"],
+    "unlock_condition": "Found in military armory",
+    "bought": false,
+    "stats": {
+      "vision_range": 50,
+      "heat_detection": "high"
+    },
+    "price": 650
+  }
+]

@@ -3,7 +3,7 @@ import time
 import random
 from game.entities.meteor import Meteor
 from game.settings import WIDTH, HEIGHT, FPS, FULLSCREEN
-from game.assets import background, game_font,Assets, SPACE_DEFAULT ,fade_out_music
+from game.assets import background,Assets, SPACE_DEFAULT ,fade_out_music
 from game.systems.game_logic import Game
 from game.senes.pause import PauseScreen
 from game.systems.hexbar import StatusBars

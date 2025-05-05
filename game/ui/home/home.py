@@ -6,8 +6,9 @@ from game.assets import (
     SPACE_DEFAULT, background, SELECT_BUTTON, SWITCH_BUTTON,
     start_button_paths, home_arrow_img, side_top_bar, left_bottom_bar,
     middle_bar, middle_bar_text, top_right, big_spaceship, bottom_right, primary_color,
-    store_panel,store_panel_flip,store_menu,shield_item
+    store_panel,store_panel_flip,store_menu,item_panel,render_multiline_text
 )
+from game.ui.home.store_data import ListNueralModel, StoreData
 
 pygame.init()
 
@@ -27,7 +28,9 @@ class HomeInterface:
         self.big_spaceship = big_spaceship
         self.bottom_right = bottom_right
         self.primary_color = primary_color
-
+        self.menu_store_data =StoreData()
+        self.menu_item_image=[]
+       
         self.bg = pygame.transform.scale(background, (WIDTH, HEIGHT))
         overlay = pygame.Surface((WIDTH, HEIGHT))
         overlay.fill((0, 0, 0))
@@ -49,7 +52,7 @@ class HomeInterface:
         self.font = pygame.font.SysFont("arial", 20, bold=True)
         self.running = True
         
-        self.selected_item_index = None 
+        self.selected_item_index = 0 
 
         # Animation state
         self.switched_index = 0
@@ -64,11 +67,18 @@ class HomeInterface:
         self.menu_item_size =35
         self.menu_selected =0
         self.isEnter =False
+       
         self.store_menu_icons = []
-        self.scroll_offset = 0
         icon_size = 32
-        start_x = WIDTH // 2 - 50  # adjust this based on your panel position
-        y = 150  # vertical position of icons, adjust based on image
+        start_x = WIDTH // 2 - 50
+        y = 150  
+
+        #store detail randering
+        self.bought= True
+        self.selected_store_category = 0
+        self.category ="nural"
+        self.store =StoreData()
+        self.itemData= self.store.getCategoryItem(self.category,self.bought)
 
         for i in range(6):  # 6 icons
             rect = pygame.Rect(start_x + i * (icon_size + 10), y, icon_size, icon_size)
@@ -146,6 +156,8 @@ class HomeInterface:
 
             # Bottom left bar
             self.window.blit(self.bottom_left, (0, HEIGHT - 100))
+
+            
 
             if self.switched_index ==0:
                 self.start_Screen()
@@ -267,38 +279,10 @@ class HomeInterface:
         pygame.draw.rect(self.window,(255,255,255), (WIDTH/2-80, 243, 270,2))
         
         # grid items
-        self.draw_shield_grid(shield_item, WIDTH/2 -85, 250,4, 50)
-
-
-
-
-   
-    def draw_shield_grid(self, items, start_x, start_y, columns=4, spacing=10):
-        item_size = 10  
-        item_rects = []
-
-        for i, image in enumerate(items):
-            row = i // columns
-            col = i % columns
-            x = start_x + col * (item_size + spacing + 10)
-            y = start_y + row * (item_size + spacing)
-
-           
-            if i == self.selected_item_index:
-                pygame.draw.rect(self.window, (0, 255, 255), (x-2, y-2, 50, 50), width=2, border_radius=6)
-                scaled_image = pygame.transform.scale(image, (image.get_width() - 4, image.get_height() -4))
-                self.window.blit(scaled_image, (x, y))
-                rect = pygame.Rect(x, y, item_size, item_size)
-                item_rects.append(rect)
-
-            else:
-                self.window.blit(image, (x, y))
-                rect = pygame.Rect(x, y, item_size, item_size)
-                item_rects.append(rect)
-
-       
-        return item_rects
-
+        self.draw_shield_grid(self.itemData, WIDTH/2 -85, 250,4, 50)
+        
+        #right_panel
+        self.draw_detail_item()
 
 
     def menu_button(self, label, pos, isSelected=False):
@@ -309,6 +293,45 @@ class HomeInterface:
         self.window.blit(text_surface, text_rect)
         return text_rect
     
+    def draw_shield_grid(self, items:ListNueralModel, start_x, start_y, columns=4, spacing=10):
+        item_size = 10  
+        item_rects = []
+
+        for i, item in enumerate(items.listItem):
+            row = i // columns
+            col = i % columns
+            x = start_x + col * (item_size + spacing + 10)
+            y = start_y + row * (item_size + spacing)
+
+           
+            if i == self.selected_item_index:
+                pygame.draw.rect(self.window, (0, 255, 255), (x-2, y-2, 50, 50), width=2, border_radius=6)
+                scaled_image = pygame.transform.scale(item.image, (item.image.get_width() - 4, item.image.get_height() -4))
+                self.window.blit(scaled_image, (x, y))
+                rect = pygame.Rect(x, y, item_size, item_size)
+                item_rects.append(rect)
+
+            else:
+                self.window.blit(item.image, (x, y))
+                rect = pygame.Rect(x, y, item_size, item_size)
+                item_rects.append(rect)
+
+       
+        return item_rects
+
+
+    def draw_detail_item(self):
+        if self.isData():
+            detail = self.itemData.listItem[self.selected_item_index]
+            self.window.blit(item_panel,(WIDTH/2+240,108))
+            scaled_image = pygame.transform.scale(detail.image, (100, 100))
+            self.window.blit(scaled_image, (WIDTH/2+255, 130))
+            font =pygame.font.Font("./assets/font/PressStart2P.ttf", 15)
+            name_surface = font.render(detail.name, True, (255, 255, 255))
+            
+            self.window.blit(name_surface,(WIDTH-300,200))
+            # render_multiline_text(self.window,name_surface,font,(255,255,255))
+        
 
     def key_Handler(self):
         for event in pygame.event.get():
@@ -327,26 +350,48 @@ class HomeInterface:
                                 SWITCH_BUTTON.play()
                             elif event.key == pygame.K_RETURN:
                                 SELECT_BUTTON.play()
-                            
-                        
+ 
+    def switchData(self):
+        self.changeCategory()
+        
+        self.itemData= self.store.getCategoryItem(self.category,self.bought)
+        
+
+    def changeCategory(self):
+        if self.menu_selected == 0:
+            self.category = "nural"
+        elif self.menu_selected == 1:
+            self.category = "plasma"
+        elif self.menu_selected == 2:
+            self.category = "precision"
+        elif self.menu_selected == 4:
+            self.category = "shield"
+        elif self.menu_selected == 3:
+            self.category = "research"
+        elif self.menu_selected == 5:
+            self.category = "toxin"
+        print(self.category)
+
     def handle_mouse_click(self, pos):
         mouse_x, mouse_y = pos
-        item_rects = self.draw_shield_grid(shield_item, WIDTH / 2 - 85, 250, 4, 50)
+        item_rects = self.draw_shield_grid(self.itemData, WIDTH / 2 - 85, 250, 4, 50)
         equipped_rect = self.menu_button("EQUIPPED", (WIDTH / 2 - 80, 220), isSelected=(self.selected_menu == "EQUIPPED"))
         store_rect = self.menu_button("STORE", (WIDTH / 2 + 10, 220), isSelected=(self.selected_menu == "STORE"))
         
 
-
-
-       
-
         if equipped_rect.collidepoint(mouse_x, mouse_y):
             self.selected_menu = "EQUIPPED"
+            self.bought=True
             SELECT_BUTTON.play()
+            self.selected_item_index =0
+            self.switchData()
             return
         elif store_rect.collidepoint(mouse_x, mouse_y):
             self.selected_menu = "STORE"
+            self.bought=False
+            self.selected_item_index =0
             SELECT_BUTTON.play()
+            self.switchData()
             return
 
         if self.switched_index == 1: 
@@ -354,8 +399,11 @@ class HomeInterface:
                 if rect.collidepoint(mouse_x, mouse_y):
                     self.selected_store_category = i
                     self.menu_selected = i
+                    self.selected_item_index =0
+                    self.switchData()
                     SELECT_BUTTON.play()
                     return
+
 
        
         for i, (x, y) in enumerate(self.button_positions):
@@ -364,17 +412,7 @@ class HomeInterface:
                 self.switched_index = i
                 SELECT_BUTTON.play()
                 return
-            
 
-        if self.switched_index == 1:
-            for index, item in enumerate(store_menu):
-                x = (WIDTH / 2 - 50) + index * self.item_space
-                y = 150
-                item_rect = pygame.Rect(x, y, self.menu_item_size, self.menu_item_size)
-                if item_rect.collidepoint(mouse_x, mouse_y):
-                    self.menu_selected = index
-                    SELECT_BUTTON.play()
-                    return
 
         for idx, rect in enumerate(item_rects):
            
@@ -383,5 +421,13 @@ class HomeInterface:
            
             if padded_rect.collidepoint(pos):
                 self.selected_item_index = idx
+                self.menu_item_index=idx
                 SELECT_BUTTON.play()
                 print(f"Clicked on shield item index: {idx}")
+    
+    
+    def isData(self):
+        if self.itemData.listItem and len(self.itemData.listItem) > 0:
+             return True
+        else:
+             return False

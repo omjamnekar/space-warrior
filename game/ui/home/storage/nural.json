@@ -1,0 +1,552 @@
+[
+  {
+    "id": "neural000",
+    "name": "Cerebral Link Fork",
+    "description": "Connects dual thought streams for parallel processing.",
+    "type": "neural_link",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["dual_thinking", "parallel_decision"],
+    "unlock_condition": "Complete Neurodivision Protocol",
+    "bought": false,
+    "stats": {
+      "sync_speed": 7,
+      "processing_boost": 12,
+      "focus_drain": 3
+    },
+    "price": 1400
+  },
+  {
+    "id": "neural001",
+    "name": "Cortex Comfort Mask",
+    "description": "A soothing interface to prevent neural fatigue.",
+    "type": "neural_interface",
+    "rarity": "uncommon",
+    "level_required": 2,
+    "effects": ["fatigue_reduction"],
+    "unlock_condition": "Complete 2 Deep Simulations",
+    "bought": true,
+    "stats": {
+      "stress_reduction": 5,
+      "durability": 6,
+      "comfort_level": 9
+    },
+    "price": 600
+  },
+  {
+    "id": "neural002",
+    "name": "NeuroStim Infuser",
+    "description": "Delivers rapid neurostim pulses to enhance reflexes.",
+    "type": "neurostim_device",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["reflex_boost", "temporary_alertness"],
+    "unlock_condition": "Unlock Reflex Initiative Module",
+    "bought": false,
+    "stats": {
+      "stimulation_rate": 8,
+      "reaction_gain": 10,
+      "usage_limit": 3
+    },
+    "price": 1600
+  },
+  {
+    "id": "neural003",
+    "name": "Signal Relay Pack",
+    "description": "Transmits thought patterns to external AI nodes.",
+    "type": "signal_transmitter",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["ai_link", "mental_projection"],
+    "unlock_condition": "Reach AI Outpost",
+    "bought": false,
+    "stats": {
+      "range": 15,
+      "signal_strength": 7,
+      "delay": 1
+    },
+    "price": 1200
+  },
+  {
+    "id": "neural004",
+    "name": "Instinct Tracker Eye",
+    "description": "Analyzes emotional cues for tactical responses.",
+    "type": "neural_sensor",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["emotion_detection", "combat_prediction"],
+    "unlock_condition": "Extract from Instinct Drone",
+    "bought": false,
+    "stats": {
+      "scan_accuracy": 6,
+      "tactical_response": 8,
+      "energy_use": 2
+    },
+    "price": 900
+  },
+  {
+    "id": "neural005",
+    "name": "Sentient Drone Core",
+    "description": "Processes autonomous decisions based on neural cues.",
+    "type": "drone_controller",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["auto_response", "drone_control"],
+    "unlock_condition": "Acquire Sentient Drone Frame",
+    "bought": false,
+    "stats": {
+      "autonomy": 10,
+      "signal_processing": 9,
+      "battery_life": 5
+    },
+    "price": 1800
+  },
+  {
+    "id": "neural006",
+    "name": "Brainwave Vault",
+    "description": "Securely stores sensitive neural patterns for future use.",
+    "type": "memory_storage",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["memory_backup", "pattern_recognition"],
+    "unlock_condition": "Complete Mind Archive Quest",
+    "bought": false,
+    "stats": {
+      "storage_capacity": 15,
+      "retrieval_speed": 6,
+      "encryption_level": 9
+    },
+    "price": 1350
+  },
+  {
+    "id": "neural007",
+    "name": "Neuroframe Leg Array",
+    "description": "Amplifies lower neural control for enhanced movement.",
+    "type": "mobility_booster",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["movement_precision", "limb_control"],
+    "unlock_condition": "Collect 3 Neuroframe Parts",
+    "bought": true,
+    "stats": {
+      "mobility_boost": 6,
+      "reaction_time": 4,
+      "energy_use": 3
+    },
+    "price": 850
+  },
+  {
+    "id": "neural008",
+    "name": "Emotion Spectrum Reader",
+    "description": "Displays current neural emotional states via a color scale.",
+    "type": "emotion_monitor",
+    "rarity": "common",
+    "level_required": 1,
+    "effects": ["mood_tracking"],
+    "unlock_condition": "Available from start",
+    "bought": true,
+    "stats": {
+      "detection_range": 5,
+      "color_variants": 6,
+      "energy_cost": 1
+    },
+    "price": 300
+  },
+  {
+    "id": "neural009",
+    "name": "OmniSight Module",
+    "description": "Enhances visual input directly to brain interface.",
+    "type": "vision_enhancer",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["enhanced_sight", "threat_detection"],
+    "unlock_condition": "Craft with Optic Crystal",
+    "bought": false,
+    "stats": {
+      "vision_range": 12,
+      "clarity_boost": 9,
+      "focus_cost": 4
+    },
+    "price": 1250
+  },
+  
+  {
+    "id": "neural010",
+    "name": "NeuroClaw Harness",
+    "description": "Taps into aggression centers for instant combat reflexes.",
+    "type": "combat_interface",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["aggression_boost", "reflex_mode"],
+    "unlock_condition": "Defeat Neuroclaw Alpha",
+    "bought": false,
+    "stats": {
+      "reaction_speed": 10,
+      "combat_efficiency": 8,
+      "stamina_drain": 4
+    },
+    "price": 1700
+  },
+  {
+    "id": "neural011",
+    "name": "Adaptive Spinal Crown",
+    "description": "Controls muscle tension through dynamic spine adjustments.",
+    "type": "spinal_mod",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["posture_control", "motion_optimization"],
+    "unlock_condition": "SpineLab Uplink Access",
+    "bought": false,
+    "stats": {
+      "stability_gain": 6,
+      "flexibility": 7,
+      "core_drain": 2
+    },
+    "price": 1100
+  },
+  {
+    "id": "neural012",
+    "name": "Cranial Anchor Array",
+    "description": "Stabilizes neural implants with bio-spinal tethers.",
+    "type": "implant_support",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["implant_stability", "shock_absorption"],
+    "unlock_condition": "Attach 2 Synaptic Anchors",
+    "bought": true,
+    "stats": {
+      "durability": 8,
+      "balance": 5,
+      "weight": 3
+    },
+    "price": 750
+  },
+  {
+    "id": "neural013",
+    "name": "NeuroCluster Lens",
+    "description": "Scans nearby neural signatures for coordination potential.",
+    "type": "neural_scanner",
+    "rarity": "epic",
+    "level_required": 7,
+    "effects": ["neural_link_scan", "sync_opportunity"],
+    "unlock_condition": "Access Cluster Memory Core",
+    "bought": false,
+    "stats": {
+      "scan_radius": 18,
+      "link_chance": 15,
+      "energy_drain": 5
+    },
+    "price": 1900
+  },
+  {
+    "id": "neural014",
+    "name": "Cyber Shaman Mask",
+    "description": "Used to enter trance states for neural healing.",
+    "type": "neural_ritual_gear",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["trance_healing", "focus_regen"],
+    "unlock_condition": "Complete Spirit Sync Ritual",
+    "bought": false,
+    "stats": {
+      "heal_rate": 7,
+      "focus_recovery": 6,
+      "tranquility": 10
+    },
+    "price": 1300
+  },
+  {
+    "id": "neural015",
+    "name": "Synapse Tension Coil",
+    "description": "Maintains tension for faster synaptic resets.",
+    "type": "neural_enhancer",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["reaction_looping", "cooldown_reduction"],
+    "unlock_condition": "Craft using Neurocoil Blueprint",
+    "bought": false,
+    "stats": {
+      "reset_speed": 5,
+      "synapse_tension": 9,
+      "wear_rate": 2
+    },
+    "price": 950
+  },
+  {
+    "id": "neural016",
+    "name": "PulseShot Conduit",
+    "description": "Channels focused neural signals to remote targets.",
+    "type": "signal_amplifier",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["neural_burst", "target_focus"],
+    "unlock_condition": "Upgrade Mind Channeling Suite",
+    "bought": false,
+    "stats": {
+      "burst_range": 12,
+      "damage_boost": 6,
+      "focus_cost": 3
+    },
+    "price": 1150
+  },
+  {
+    "id": "neural017",
+    "name": "Cognitive Halo",
+    "description": "A luminous ring that helps maintain clarity during overdrive.",
+    "type": "focus_stabilizer",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["clarity_lock", "overdrive_control"],
+    "unlock_condition": "Gain Enlightenment Core",
+    "bought": false,
+    "stats": {
+      "clarity_level": 10,
+      "overheat_resistance": 5,
+      "energy_flow": 7
+    },
+    "price": 1600
+  },
+  {
+    "id": "neural018",
+    "name": "Aegis Frame Plate",
+    "description": "Defensive neural plate with reflex trigger zones.",
+    "type": "defense_matrix",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["damage_deflection", "auto_block"],
+    "unlock_condition": "Install 2 Neural Armor Nodes",
+    "bought": true,
+    "stats": {
+      "armor_value": 12,
+      "trigger_speed": 4,
+      "durability": 10
+    },
+    "price": 1450
+  },
+  {
+    "id": "neural019",
+    "name": "NeuroSignal Tablet",
+    "description": "Portable signal node used to debug or rewrite live code in neural implants.",
+    "type": "debug_tool",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["code_patch", "neural_reset"],
+    "unlock_condition": "Find in Tech Crate Alpha",
+    "bought": false,
+    "stats": {
+      "program_speed": 6,
+      "access_level": 8,
+      "reboot_time": 2
+    },
+    "price": 980
+  },
+
+
+  {
+    "id": "neural020",
+    "name": "NeuroStitch Injector",
+    "description": "Deploys neural stitches to repair damaged cognitive pathways.",
+    "type": "neural_repair",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["repair_burst", "pathway_relink"],
+    "unlock_condition": "Use 3 Mind Stitch Capsules",
+    "bought": false,
+    "stats": {
+      "repair_speed": 7,
+      "stability_restored": 6,
+      "cooldown": 3
+    },
+    "price": 1250
+  },
+  {
+    "id": "neural021",
+    "name": "Cortex Finger",
+    "description": "Interfaces with fine motor neurons for surgical precision.",
+    "type": "precision_tool",
+    "rarity": "epic",
+    "level_required": 5,
+    "effects": ["fine_control", "grip_modulation"],
+    "unlock_condition": "Reach Neural Dexterity Rank II",
+    "bought": false,
+    "stats": {
+      "accuracy": 10,
+      "motor_response": 8,
+      "energy_usage": 2
+    },
+    "price": 1450
+  },
+  {
+    "id": "neural022",
+    "name": "Servo Nerve Arm",
+    "description": "Reinforced synthetic arm linked directly to spinal core.",
+    "type": "limb_upgrade",
+    "rarity": "rare",
+    "level_required": 6,
+    "effects": ["strength_boost", "neural_sync"],
+    "unlock_condition": "Attach at Cyber Limb Station",
+    "bought": false,
+    "stats": {
+      "power": 9,
+      "sync_latency": 3,
+      "defense_rating": 5
+    },
+    "price": 1350
+  },
+  {
+    "id": "neural023",
+    "name": "Nerve Bow Spindle",
+    "description": "Flexible neural actuator for ranged weapon calibration.",
+    "type": "weapon_support",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["stabilize_aim", "range_calibration"],
+    "unlock_condition": "Equip with Bow-Arc Adapter",
+    "bought": true,
+    "stats": {
+      "range_boost": 4,
+      "aim_stability": 6,
+      "reflex_cost": 1
+    },
+    "price": 890
+  },
+  {
+    "id": "neural024",
+    "name": "NeuroBlade Spire",
+    "description": "A monomolecular blade that links directly with neural inputs for instant slashing.",
+    "type": "neural_weapon",
+    "rarity": "epic",
+    "level_required": 7,
+    "effects": ["instant_strike", "signal_slash"],
+    "unlock_condition": "Win the Neural Duel Challenge",
+    "bought": false,
+    "stats": {
+      "strike_speed": 9,
+      "cut_depth": 10,
+      "focus_usage": 3
+    },
+    "price": 1650
+  },
+  {
+    "id": "neural025",
+    "name": "Retina Dial Sensor",
+    "description": "Optimizes optic processing through fine-grained iris adjustment.",
+    "type": "visual_mod",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["visual_precision", "light_filter"],
+    "unlock_condition": "Scan 3 Optical Nodes",
+    "bought": false,
+    "stats": {
+      "focus_clarity": 8,
+      "light_control": 6,
+      "battery_life": 4
+    },
+    "price": 1150
+  },
+  {
+    "id": "neural026",
+    "name": "Knee Drive Lever",
+    "description": "Redirects motion signals to enhance sprint efficiency.",
+    "type": "motion_booster",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["sprint_speed", "knee_shock_absorb"],
+    "unlock_condition": "Sprint 100m with Neural Shoes",
+    "bought": true,
+    "stats": {
+      "speed_gain": 5,
+      "shock_absorption": 7,
+      "energy_cost": 3
+    },
+    "price": 950
+  },
+  {
+    "id": "neural027",
+    "name": "Vital Patch Core",
+    "description": "Emergency stim injector for instant health regulation.",
+    "type": "healing_module",
+    "rarity": "rare",
+    "level_required": 5,
+    "effects": ["instant_heal", "vital_monitoring"],
+    "unlock_condition": "Acquire MedTech License",
+    "bought": false,
+    "stats": {
+      "heal_injection": 20,
+      "response_time": 1,
+      "cooldown": 5
+    },
+    "price": 1350
+  },
+  {
+    "id": "neural028",
+    "name": "Flexor Digit Servo",
+    "description": "Small finger joint servo for grip enhancement.",
+    "type": "micro_motor",
+    "rarity": "common",
+    "level_required": 2,
+    "effects": ["grip_strength", "fine_control"],
+    "unlock_condition": "Install Basic Servo Package",
+    "bought": false,
+    "stats": {
+      "grip_force": 4,
+      "speed": 3,
+      "wear": 2
+    },
+    "price": 600
+  },
+  {
+    "id": "neural029",
+    "name": "Symmetric Relay Drum",
+    "description": "Balances neural signal pathways for symmetric motion.",
+    "type": "signal_balancer",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["motion_synchronization", "load_balancing"],
+    "unlock_condition": "Test on Dual Arm Rig",
+    "bought": false,
+    "stats": {
+      "sync_rate": 7,
+      "latency": 3,
+      "calibration_time": 2
+    },
+    "price": 970
+  },
+
+   {
+    "id": "neural030",
+    "name": "Redline Injector",
+    "description": "Stimulates adrenaline-like neural surges for short bursts of power.",
+    "type": "stim_module",
+    "rarity": "rare",
+    "level_required": 6,
+    "effects": ["burst_strength", "overdrive_mode"],
+    "unlock_condition": "Complete Surge Protocol Trial",
+    "bought": false,
+    "stats": {
+      "boost_duration": 5,
+      "power_gain": 8,
+      "recoil_risk": 3
+    },
+    "price": 1380
+  },
+  {
+    "id": "neural031",
+    "name": "NeuroFlex Boots",
+    "description": "Foot modules designed to link footfalls with neural intent.",
+    "type": "mobility_gear",
+    "rarity": "uncommon",
+    "level_required": 4,
+    "effects": ["step_assist", "agility_boost"],
+    "unlock_condition": "Install Foot Synapse Adapter",
+    "bought": false,
+    "stats": {
+      "jump_bonus": 4,
+      "agility": 5,
+      "stamina_cost": 2
+    },
+    "price": 980
+  }
+
+
+]

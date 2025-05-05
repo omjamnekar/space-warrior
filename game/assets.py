@@ -368,6 +368,15 @@ for index, item in enumerate(store_menu):
 
 
 
+
+
+
+# store category data
+# ////////////////////////////////////
+
+
+#shield
+
 shield_item = [
     pygame.transform.scale(
         pygame.image.load(f"assets/interface/store/shield/tile{i:03d}.png").convert_alpha(),
@@ -375,9 +384,66 @@ shield_item = [
     )
     for i in range(1, 32)
 ]
+# plasma
+
+plasma_item = [
+    pygame.transform.scale(
+        pygame.image.load(f"assets/interface/store/plasma/inv{i:03d}.png").convert_alpha(),
+        (50,50)
+    )
+
+    for i in range(0,20)
+]
 
 
+#precision
 
-VISIBLE_ROWS = 4
-ITEM_HEIGHT = 60  # including spacing
-SCROLL_SPEED = 20
+precision_item =[
+    pygame.transform.scale(
+        pygame.image.load(f"assets/interface/store/precision/tile{i:03d}.png").convert_alpha(),
+        (50,50)
+    )
+
+    for i in range(0,31)
+]
+
+
+#toxins
+
+toxins_item =[
+    pygame.transform.scale(
+        pygame.image.load(f"assets/interface/store/toxins/tile{i:03d}.png").convert_alpha(),
+        (50,50)
+    )
+
+    for i in range(0,31)
+]
+
+#research
+
+research_item =[
+    pygame.transform.scale(
+        pygame.image.load(f"assets/interface/store/research/tile{i:03d}.png").convert_alpha(),
+        (50,50)
+    )
+
+    for i in range(1,32)
+]
+
+
+#nural
+
+nural_item =[
+    pygame.transform.scale(
+        pygame.image.load(f"assets/interface/store/nural/tile{i:03d}.png").convert_alpha(),
+        (50,50)
+    )
+
+    for i in range(0,32)
+]
+
+
+# detail panel
+
+item_panel = pygame.image.load("assets/interface/store/show_box.png")
+item_panel= pygame.transform.scale(item_panel,(120,150))

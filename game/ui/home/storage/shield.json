@@ -1,0 +1,535 @@
+[
+  {
+    "id": "engine001",
+    "name": "Ion Pulse Injector",
+    "description": "Fires short bursts of ion energy to accelerate the ship instantly.",
+    "type": "thruster",
+    "rarity": "rare",
+    "level_required": 3,
+    "effects": ["quick_burst", "low_energy_cost"],
+    "unlock_condition": "Complete Ion Trail Mission",
+    "bought": false,
+    "stats": {
+      "thrust_power": 12,
+      "cooldown": 2,
+      "energy_cost": 5
+    },
+    "price": 900
+  },
+  {
+    "id": "engine002",
+    "name": "Turbo Vector Nozzle",
+    "description": "High-efficiency nozzle with tight maneuvering capability.",
+    "type": "thruster",
+    "rarity": "uncommon",
+    "level_required": 2,
+    "effects": ["directional_thrust"],
+    "unlock_condition": "Reach Level 2",
+    "bought": false,
+    "stats": {
+      "thrust_power": 10,
+      "maneuverability": 7,
+      "energy_cost": 6
+    },
+    "price": 750
+  },
+  {
+    "id": "engine003",
+    "name": "Hyper Lance Booster",
+    "description": "Extends ship dash distance with concentrated plasma jets.",
+    "type": "dash_engine",
+    "rarity": "epic",
+    "level_required": 5,
+    "effects": ["extended_dash", "minor_invincibility"],
+    "unlock_condition": "Defeat Rift Guardian",
+    "bought": false,
+    "stats": {
+      "dash_distance": 20,
+      "invincibility_time": 1,
+      "energy_cost": 12
+    },
+    "price": 2000
+  },
+  {
+    "id": "engine004",
+    "name": "Twin Core Blaster",
+    "description": "Twin propulsion units for stable yet powerful thrust.",
+    "type": "thruster",
+    "rarity": "common",
+    "level_required": 1,
+    "effects": ["balanced_thrust"],
+    "unlock_condition": "Available from start",
+    "bought": true,
+    "stats": {
+      "thrust_power": 8,
+      "stability": 6,
+      "energy_cost": 4
+    },
+    "price": 300
+  },
+  {
+    "id": "engine005",
+    "name": "Photon Split Accelerator",
+    "description": "Splits photon particles to reduce inertia and boost speed.",
+    "type": "speed_booster",
+    "rarity": "legendary",
+    "level_required": 7,
+    "effects": ["max_speed_boost", "inertia_reduction"],
+    "unlock_condition": "Craft with Quantum Core",
+    "bought": false,
+    "stats": {
+      "speed_multiplier": 1.6,
+      "inertia_loss": 20,
+      "energy_cost": 15
+    },
+    "price": 2800
+  },
+  {
+    "id": "engine006",
+    "name": "Grav Tank Drive",
+    "description": "Heavy-duty drive for armored ships with built-in stabilizers.",
+    "type": "heavy_thruster",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["armor_bonus", "reduced_knockback"],
+    "unlock_condition": "Collect 3 Armor Cores",
+    "bought": false,
+    "stats": {
+      "armor_bonus": 10,
+      "stability": 8,
+      "thrust_power": 6
+    },
+    "price": 1200
+  },
+  {
+    "id": "engine007",
+    "name": "Echo Dynamics Pod",
+    "description": "Compact drive for tight navigation in asteroid fields.",
+    "type": "navigation_thruster",
+    "rarity": "uncommon",
+    "level_required": 2,
+    "effects": ["tight_turn_radius"],
+    "unlock_condition": "Scan 5 Asteroid Zones",
+    "bought": false,
+    "stats": {
+      "turn_radius": 3,
+      "thrust_power": 7,
+      "energy_cost": 5
+    },
+    "price": 800
+  },
+  {
+    "id": "engine008",
+    "name": "Pulse Reactor Core",
+    "description": "Powerful reactor engine that gives short but intense acceleration bursts.",
+    "type": "reactor_boost",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["burst_speed", "energy_surge"],
+    "unlock_condition": "Reach Sector Zeta",
+    "bought": false,
+    "stats": {
+      "burst_power": 15,
+      "cooldown": 3,
+      "energy_cost": 10
+    },
+    "price": 1600
+  },
+  {
+    "id": "engine009",
+    "name": "Cryo Burn Thruster",
+    "description": "Combines cryo-fuel and burn fuel to stabilize speed output.",
+    "type": "dual_fuel_engine",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["temperature_control", "stable_speed"],
+    "unlock_condition": "Obtain Cryo Crystal and Burn Fuel",
+    "bought": false,
+    "stats": {
+      "speed": 11,
+      "cooling_rate": 5,
+      "fuel_efficiency": 7
+    },
+    "price": 1300
+  },
+  {
+    "id": "engine010",
+    "name": "Nova Cycler Engine",
+    "description": "High-velocity engine with nova-oscillation control.",
+    "type": "oscillator_engine",
+    "rarity": "legendary",
+    "level_required": 8,
+    "effects": ["oscillating_thrust", "nova_burst"],
+    "unlock_condition": "Beat Final Trial",
+    "bought": false,
+    "stats": {
+      "velocity": 17,
+      "oscillation_frequency": 3,
+      "energy_cost": 14
+    },
+    "price": 3000
+  },
+
+  
+  {
+    "id": "engine011",
+    "name": "Twin Chamber Reactor",
+    "description": "Dual-reactor system that boosts energy regeneration during thrust.",
+    "type": "reactor",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["energy_regen_boost"],
+    "unlock_condition": "Upgrade Energy Core to Level 2",
+    "bought": false,
+    "stats": {
+      "regen_rate": 6,
+      "thrust_bonus": 4,
+      "cooldown": 1
+    },
+    "price": 950
+  },
+  {
+    "id": "engine012",
+    "name": "Micro Fusion Unit",
+    "description": "Compact fusion cores for short-range ships needing fast recharge.",
+    "type": "fusion_core",
+    "rarity": "common",
+    "level_required": 1,
+    "effects": ["fast_recharge"],
+    "unlock_condition": "Available from start",
+    "bought": true,
+    "stats": {
+      "recharge_time": 2,
+      "capacity": 30,
+      "heat_output": 3
+    },
+    "price": 400
+  },
+  {
+    "id": "engine013",
+    "name": "Orbital Flux Engine",
+    "description": "Provides circular flux propulsion for orbital navigation.",
+    "type": "maneuver_engine",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["circular_thrust", "orbital_control"],
+    "unlock_condition": "Dock at 3 Orbital Stations",
+    "bought": false,
+    "stats": {
+      "orbital_control": 8,
+      "energy_cost": 6,
+      "maneuverability": 7
+    },
+    "price": 1100
+  },
+  {
+    "id": "engine014",
+    "name": "X-Cross Reactor Node",
+    "description": "X-shaped power node channels plasma in four directions.",
+    "type": "plasma_node",
+    "rarity": "epic",
+    "level_required": 6,
+    "effects": ["multi_directional_output"],
+    "unlock_condition": "Complete Plasma Circuit Quest",
+    "bought": false,
+    "stats": {
+      "output_nodes": 4,
+      "plasma_flow": 12,
+      "stability": 5
+    },
+    "price": 1800
+  },
+  {
+    "id": "engine015",
+    "name": "Signal Control Grid",
+    "description": "Manages synchronization between engine components.",
+    "type": "control_module",
+    "rarity": "uncommon",
+    "level_required": 2,
+    "effects": ["engine_sync"],
+    "unlock_condition": "Find Signal Tower Logs",
+    "bought": false,
+    "stats": {
+      "sync_rate": 5,
+      "system_latency": 1,
+      "power_draw": 3
+    },
+    "price": 700
+  },
+  {
+    "id": "engine016",
+    "name": "Cargo Core Box",
+    "description": "Reinforced cargo storage with energy dampeners.",
+    "type": "support_module",
+    "rarity": "common",
+    "level_required": 1,
+    "effects": ["extra_storage"],
+    "unlock_condition": "Available from start",
+    "bought": true,
+    "stats": {
+      "storage_capacity": 20,
+      "damage_resistance": 2,
+      "mass_increase": 4
+    },
+    "price": 250
+  },
+  {
+    "id": "engine017",
+    "name": "Auxiliary Energy Regulator",
+    "description": "Regulates power distribution during overheating.",
+    "type": "energy_module",
+    "rarity": "rare",
+    "level_required": 3,
+    "effects": ["power_balancing", "heat_control"],
+    "unlock_condition": "Obtain 2 Heat Crystals",
+    "bought": false,
+    "stats": {
+      "heat_dissipation": 4,
+      "power_flow": 6,
+      "cooldown_time": 2
+    },
+    "price": 1000
+  },
+  {
+    "id": "engine018",
+    "name": "Magnetic Rotor Array",
+    "description": "Uses magnetic force to rotate auxiliary components rapidly.",
+    "type": "motion_module",
+    "rarity": "uncommon",
+    "level_required": 2,
+    "effects": ["fast_rotation"],
+    "unlock_condition": "Craft Magnetic Coils",
+    "bought": false,
+    "stats": {
+      "rotation_speed": 9,
+      "energy_cost": 5,
+      "durability": 6
+    },
+    "price": 850
+  },
+  {
+    "id": "engine019",
+    "name": "Starlink Beacon Sync",
+    "description": "Synchronizes ship movement with nearby beacons.",
+    "type": "navigation_module",
+    "rarity": "epic",
+    "level_required": 5,
+    "effects": ["position_lock", "navigation_assist"],
+    "unlock_condition": "Discover 5 Starlink Beacons",
+    "bought": false,
+    "stats": {
+      "sync_range": 12,
+      "signal_delay": 1,
+      "accuracy_boost": 7
+    },
+    "price": 1700
+  },
+  {
+    "id": "engine020",
+    "name": "Pulse Damper Coil",
+    "description": "Reduces vibration and energy spikes during pulse firing.",
+    "type": "stability_module",
+    "rarity": "rare",
+    "level_required": 3,
+    "effects": ["pulse_stabilization", "shock_absorption"],
+    "unlock_condition": "Defeat Pulse Drone",
+    "bought": false,
+    "stats": {
+      "vibration_reduction": 6,
+      "shock_absorption": 5,
+      "weight": 3
+    },
+    "price": 950
+  },
+  
+  {
+    "id": "engine021",
+    "name": "Reinforced Exhaust Grid",
+    "description": "A durable exhaust panel that manages heat efficiently.",
+    "type": "exhaust_system",
+    "rarity": "common",
+    "level_required": 1,
+    "effects": ["heat_control"],
+    "unlock_condition": "Available from start",
+    "bought": true,
+    "stats": {
+      "heat_dissipation": 5,
+      "durability": 6,
+      "mass": 2
+    },
+    "price": 400
+  },
+  {
+    "id": "engine022",
+    "name": "Double Heat Vent",
+    "description": "Twin-vent system that rapidly cools thrusters after use.",
+    "type": "cooling_unit",
+    "rarity": "uncommon",
+    "level_required": 2,
+    "effects": ["rapid_cooling"],
+    "unlock_condition": "Craft from Dual Vent Kit",
+    "bought": false,
+    "stats": {
+      "cooling_rate": 8,
+      "energy_cost": 4,
+      "vent_strength": 3
+    },
+    "price": 700
+  },
+  {
+    "id": "engine023",
+    "name": "Triple Flow Regulator",
+    "description": "Controls fluid plasma flow across three key systems.",
+    "type": "plasma_control",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["plasma_flow_balance"],
+    "unlock_condition": "Discover Plasma Junction",
+    "bought": false,
+    "stats": {
+      "flow_capacity": 9,
+      "system_sync": 4,
+      "stability": 6
+    },
+    "price": 1100
+  },
+  {
+    "id": "engine024",
+    "name": "Cryo-Barrel Coolant",
+    "description": "Chilled barrels maintain engine temperature under strain.",
+    "type": "coolant",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["cryo_cooling"],
+    "unlock_condition": "Collect 2 Cryo Fragments",
+    "bought": false,
+    "stats": {
+      "cooling_efficiency": 7,
+      "operational_time": 10,
+      "weight": 4
+    },
+    "price": 800
+  },
+  {
+    "id": "engine025",
+    "name": "Overload Capacitor Cylinders",
+    "description": "Stores excess power bursts for emergency use.",
+    "type": "capacitor",
+    "rarity": "epic",
+    "level_required": 5,
+    "effects": ["emergency_power", "short_circuit_protection"],
+    "unlock_condition": "Reach Reactor Overload",
+    "bought": false,
+    "stats": {
+      "power_storage": 20,
+      "release_time": 2,
+      "stability": 5
+    },
+    "price": 1600
+  },
+  {
+    "id": "engine026",
+    "name": "Gyro Core Engine",
+    "description": "Internal gyro module for directional stabilization.",
+    "type": "stabilizer",
+    "rarity": "rare",
+    "level_required": 3,
+    "effects": ["auto_balance", "recoil_control"],
+    "unlock_condition": "Scan 3 Planetary Fields",
+    "bought": false,
+    "stats": {
+      "gyro_strength": 6,
+      "maneuver_bonus": 3,
+      "mass": 2
+    },
+    "price": 950
+  },
+  {
+    "id": "engine027",
+    "name": "Maglock Rotor Disc",
+    "description": "Enhances grip and control during high-speed turns.",
+    "type": "rotation_module",
+    "rarity": "uncommon",
+    "level_required": 2,
+    "effects": ["tight_turning"],
+    "unlock_condition": "Defeat Maglock Defender",
+    "bought": false,
+    "stats": {
+      "turn_stability": 7,
+      "energy_usage": 4,
+      "grip_control": 5
+    },
+    "price": 750
+  },
+  {
+    "id": "engine028",
+    "name": "Vortex Clutch Plate",
+    "description": "Creates a feedback loop to prevent thrust stuttering.",
+    "type": "engine_clutch",
+    "rarity": "epic",
+    "level_required": 5,
+    "effects": ["smooth_acceleration", "feedback_control"],
+    "unlock_condition": "Assemble Vortex Kit",
+    "bought": false,
+    "stats": {
+      "feedback_dampening": 8,
+      "thrust_response": 6,
+      "durability": 5
+    },
+    "price": 1500
+  },
+  {
+    "id": "engine029",
+    "name": "Quantum Spin Rotor",
+    "description": "A spinning quantum disk that boosts lateral movement.",
+    "type": "movement_enhancer",
+    "rarity": "rare",
+    "level_required": 4,
+    "effects": ["side_thrust_boost", "rotational_speed"],
+    "unlock_condition": "Reach Quantum Field",
+    "bought": false,
+    "stats": {
+      "spin_rate": 10,
+      "thrust_modifier": 3,
+      "energy_cost": 6
+    },
+    "price": 1200
+  },
+  {
+    "id": "engine030",
+    "name": "Echo Stabilizer Coil",
+    "description": "Cancels engine echoes for stealth thrust.",
+    "type": "stealth_module",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["thrust_silence", "signal_dampening"],
+    "unlock_condition": "Craft with Stealth Circuit",
+    "bought": false,
+    "stats": {
+      "noise_reduction": 8,
+      "visibility": -2,
+      "energy_cost": 4
+    },
+    "price": 1000
+  },
+
+   {
+    "id": "engine030",
+    "name": "Echo Stabilizer Coil",
+    "description": "Cancels engine echoes for stealth thrust.",
+    "type": "stealth_module",
+    "rarity": "uncommon",
+    "level_required": 3,
+    "effects": ["thrust_silence", "signal_dampening"],
+    "unlock_condition": "Craft with Stealth Circuit",
+    "bought": false,
+    "stats": {
+      "noise_reduction": 8,
+      "visibility": -2,
+      "energy_cost": 4
+    },
+    "price": 1000
+  }
+
+
+]
